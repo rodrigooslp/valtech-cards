@@ -1,6 +1,7 @@
 <template>
-  <div class="w-full h-full" @mouseenter="showEnterAnimation" @mouseleave="showLeaveAnimation">
-    <div class="bg" :class="body.class">
+  <div class="w-full h-full relative" @mouseenter="showEnterAnimation" @mouseleave="showLeaveAnimation">
+    <div class="bg-center bg-cover w-full h-full absolute rounded-lg" :class="body.class"></div>
+    <div ref="card" class="h-full overlay rounded-lg">
       <div class="flex flex-col justify-center items-center h-full">
 
         <slot v-if="isContentDefault">
@@ -34,15 +35,17 @@ export default {
     }
   },
   mounted () {
-    const { title, description, button } = this.$refs
+    const { title, description, button, card } = this.$refs
     const timeline = gsap.timeline({ paused: true })
 
     if (title && description && button) {
       timeline
         .add()
-        .to(title, { y: '-0.5rem', duration: 0.3, ease: 'power3.out' })
+        .to(card, { backgroundImage: 'linear-gradient(#525252bf, #525252bf)', duration: 0.3 })
         .add()
-        .to(description, { maxHeight: '100%', opacity: 1, duration: 1, ease: 'sin.out' }, '-=0.2')
+        .to(title, { y: '-0.5rem', duration: 0.3, ease: 'power3.out' }, '-=0.3')
+        .add()
+        .to(description, { maxHeight: '100%', opacity: 1, duration: 0.8, ease: 'sin.out' }, '-=0.2')
         .add()
         .to(button, { opacity: 1, duration: 0.2, ease: 'sin.out' }, '-=0.7')
 
@@ -142,78 +145,79 @@ export default {
   color: #ffffffbf;
 }
 
-.bg {
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  border-radius: .5rem;
+.overlay {
+  background-image: linear-gradient(#33333380, #33333380);
 }
 
 .webp {
   .bg-default {
-    background-image: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url('../../assets/img/bg-default.webp')
+    z-index: -1;
+    background-image: url('../../assets/img/bg-default.webp');
   }
 
   .bg-venice {
-    background-image: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url('../../assets/img/bg-venice.webp')
+    z-index: -1;
+    background-image: url('../../assets/img/bg-venice.webp');
   }
 
   .bg-venice {
-    background-image: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url('../../assets/img/bg-venice.webp')
+    z-index: -1;
+    background-image: url('../../assets/img/bg-venice.webp');
   }
-
-  // .bg-venice:hover {
-  //   background-image: linear-gradient(rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.8)), url('../../assets/img/bg-venice.webp')
-  // }
 
   .bg-berlin {
-    background-image: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url('../../assets/img/bg-berlin.webp')
+    z-index: -1;
+    background-image: url('../../assets/img/bg-berlin.webp');
   }
 
   .bg-barcelona {
-    background-image: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url('../../assets/img/bg-barcelona.webp')
+    z-index: -1;
+    background-image: url('../../assets/img/bg-barcelona.webp');
   }
 
   .bg-paris {
-    background-image: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url('../../assets/img/bg-paris.webp')
+    z-index: -1;
+    background-image: url('../../assets/img/bg-paris.webp');
   }
 
   .bg-amsterdam {
-    background-image: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url('../../assets/img/bg-amsterdam.webp')
+    z-index: -1;
+    background-image: url('../../assets/img/bg-amsterdam.webp');
   }
 
   .bg-london {
-    background-image: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url('../../assets/img/bg-london.webp')
+    z-index: -1;
+    background-image: url('../../assets/img/bg-london.webp');
   }
 }
 
 .no-webp {
   .bg-default {
-    background-image: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url('../../assets/img/bg-default.jpg')
+    background-image: url('../../assets/img/bg-default.jpg');
   }
 
   .bg-venice {
-    background-image: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url('../../assets/img/bg-venice.jpg')
+    background-image: url('../../assets/img/bg-venice.jpg');
   }
 
   .bg-berlin {
-    background-image: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url('../../assets/img/bg-berlin.jpg')
+    background-image: url('../../assets/img/bg-berlin.jpg');
   }
 
   .bg-barcelona {
-    background-image: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url('../../assets/img/bg-barcelona.jpg')
+    background-image: url('../../assets/img/bg-barcelona.jpg');
   }
 
   .bg-paris {
-    background-image: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url('../../assets/img/bg-paris.jpg')
+    background-image: url('../../assets/img/bg-paris.jpg');
   }
 
   .bg-amsterdam {
-    background-image: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url('../../assets/img/bg-amsterdam.jpg')
+    background-image: url('../../assets/img/bg-amsterdam.jpg');
   }
 
   .bg-london {
-    background-image: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url('../../assets/img/bg-london.jpg')
+    background-image: url('../../assets/img/bg-london.jpg');
   }
 }
 
