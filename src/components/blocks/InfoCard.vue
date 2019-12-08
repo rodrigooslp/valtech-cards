@@ -10,12 +10,13 @@
         </slot>
 
         <slot v-else>
-          <div ref="title" class="flex flex-col justify-center items-center mt-4">
+          <div ref="title" class="flex flex-col justify-center items-center mt-8">
             <h2 class="mb-2 heading">{{ body.heading }}</h2>
             <h1 class="text-white font-semibold title">{{ body.title }}</h1>
           </div>
-          <h4 ref="description" class="hidden mt-2 px-8 text-center flex-grow md:px-10 description">{{ body.description }}</h4>
-          <button ref="button" class="hidden text-white border border-solid border-white px-4 py-1 mt-3 rounded focus:outline-none mb-6 button">Explore More</button>
+
+          <h4 ref="description" class="opacity-0 mt-2 px-8 text-center flex-grow md:px-10 description">{{ body.description }}</h4>
+          <button ref="button" class="opacity-0 text-white border border-solid border-white px-4 py-1 mt-3 rounded focus:outline-none mb-6 button">Explore More</button>
         </slot>
       </div>
     </div>
@@ -23,13 +24,31 @@
 </template>
 
 <script>
-// import { gsap } from 'gsap'
+import { gsap } from 'gsap'
 
 export default {
   props: {
     content: {
       type: String,
       default: 'default'
+    }
+  },
+  mounted () {
+    const { title, description, button } = this.$refs
+
+    if (title && description && button) {
+      const timeline = gsap.timeline({ paused: true })
+
+      timeline
+        .add()
+        .to(title, { y: '-0.5rem', duration: 0.3, ease: 'power3.out' })
+        .add()
+        .to(description, { maxHeight: '100%', opacity: 1, duration: 1, ease: 'sin.out' }, '-=0.2')
+        .add()
+        .to(button, { opacity: 1, duration: 0.2, ease: 'sin.out' }, '-=0.7')
+
+      timeline.progress(1).progress(0)
+      this.timeline = timeline
     }
   },
   computed: {
@@ -45,22 +64,15 @@ export default {
   },
   methods: {
     showEnterAnimation () {
-      // if (!this.isContentDefault) {
-      //   const { title, description } = this.$refs
-      //   gsap.to(title, { y: '-2rem', duration: 1.5, ease: 'sin.out' })
-      //   gsap.to(description, { y: '-2rem', display: 'block', opacity: 1, duration: 1.5, ease: 'sin.out' })
-      // }
+      if (this.timeline) this.timeline.play()
     },
     showLeaveAnimation () {
-      // if (!this.isContentDefault) {
-      //   const { title, description } = this.$refs
-      //   gsap.to(title, { y: 0, duration: 1.5, ease: 'sin.in' })
-      //   gsap.to(description, { y: 0, display: 'none', opacity: 0, duration: 0.5, ease: 'sin.out' })
-      // }
+      if (this.timeline) this.timeline.reverse()
     }
   },
   data () {
     return {
+      timeline: null,
       text: {
         default: {
           heading: 'FRONT-END',
@@ -125,8 +137,9 @@ export default {
 }
 
 .description {
- font-size: 0.95rem;
- color: #ffffffbf;
+  max-height: 0;
+  font-size: 0.95rem;
+  color: #ffffffbf;
 }
 
 .bg {
