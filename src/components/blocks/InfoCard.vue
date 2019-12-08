@@ -2,14 +2,21 @@
   <div class="w-full h-full" @mouseenter="showEnterAnimation" @mouseleave="showLeaveAnimation">
     <div class="bg" :class="body.class">
       <div class="flex flex-col justify-center items-center h-full">
-        <div ref="title" class="flex flex-col justify-center items-center">
+
+        <slot v-if="isContentDefault">
           <h2 class="mb-2 heading">{{ body.heading }}</h2>
-          <img v-if="isContentDefault" class="h-8 mt-1 mb-3" :src="require('@/assets/img/logo.svg')">
-          <h1 class="text-white font-semibold title">{{ body.title }}</h1>
-        </div>
-        <!-- <h4 ref="description" class="mt-2 px-8 text-center description md:px-56" :class="{ 'hidden': !isContentDefault }">{{ body.description }}</h4> -->
-        <h4 ref="description" class="mt-2 px-8 text-center description" :class="{ 'md:px-56': isContentDefault, 'md:px-10': !isContentDefault }">{{ body.description }}</h4>
-        <button v-if="!isContentDefault" class="text-white border border-solid border-white px-4 py-1 mt-3 rounded focus:outline-none button">Explore More</button>
+          <img class="h-8 mt-1 mb-3" :src="require('@/assets/img/logo.svg')">
+          <h4 class="mt-2 px-8 text-center md:px-56 description">{{ body.description }}</h4>
+        </slot>
+
+        <slot v-else>
+          <div ref="title" class="flex flex-col justify-center items-center mt-4">
+            <h2 class="mb-2 heading">{{ body.heading }}</h2>
+            <h1 class="text-white font-semibold title">{{ body.title }}</h1>
+          </div>
+          <h4 ref="description" class="hidden mt-2 px-8 text-center flex-grow md:px-10 description">{{ body.description }}</h4>
+          <button ref="button" class="hidden text-white border border-solid border-white px-4 py-1 mt-3 rounded focus:outline-none mb-6 button">Explore More</button>
+        </slot>
       </div>
     </div>
   </div>
