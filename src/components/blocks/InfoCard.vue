@@ -35,10 +35,9 @@ export default {
   },
   mounted () {
     const { title, description, button } = this.$refs
+    const timeline = gsap.timeline({ paused: true })
 
     if (title && description && button) {
-      const timeline = gsap.timeline({ paused: true })
-
       timeline
         .add()
         .to(title, { y: '-0.5rem', duration: 0.3, ease: 'power3.out' })
@@ -48,8 +47,9 @@ export default {
         .to(button, { opacity: 1, duration: 0.2, ease: 'sin.out' }, '-=0.7')
 
       timeline.progress(1).progress(0)
-      this.timeline = timeline
     }
+
+    this.timeline = timeline
   },
   computed: {
     isContentDefault () {
@@ -64,10 +64,10 @@ export default {
   },
   methods: {
     showEnterAnimation () {
-      if (this.timeline) this.timeline.play()
+      this.timeline.play()
     },
     showLeaveAnimation () {
-      if (this.timeline) this.timeline.reverse()
+      this.timeline.reverse()
     }
   },
   data () {
@@ -157,6 +157,14 @@ export default {
   .bg-venice {
     background-image: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url('../../assets/img/bg-venice.webp')
   }
+
+  .bg-venice {
+    background-image: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url('../../assets/img/bg-venice.webp')
+  }
+
+  // .bg-venice:hover {
+  //   background-image: linear-gradient(rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.8)), url('../../assets/img/bg-venice.webp')
+  // }
 
   .bg-berlin {
     background-image: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url('../../assets/img/bg-berlin.webp')
