@@ -8,7 +8,7 @@
           <h1 class="text-white font-semibold title">{{ body.title }}</h1>
         </div>
         <!-- <h4 ref="description" class="mt-2 px-8 text-center description md:px-56" :class="{ 'hidden': !isContentDefault }">{{ body.description }}</h4> -->
-        <h4 ref="description" class="mt-2 px-8 text-center description md:px-56">{{ body.description }}</h4>
+        <h4 ref="description" class="mt-2 px-8 text-center description" :class="{ 'md:px-56': isContentDefault, 'md:px-10': !isContentDefault }">{{ body.description }}</h4>
         <button v-if="!isContentDefault" class="text-white border border-solid border-white px-4 py-1 mt-3 rounded focus:outline-none button">Explore More</button>
       </div>
     </div>
@@ -70,25 +70,25 @@ export default {
           heading: 'GERMANY',
           title: 'BERLIN',
           class: 'bg-berlin',
-          description: 'Berlin, Germany’s capital, dates to the 13th century. The city\'s known for its art scene and modern landmarks like the gold-colored, swoop-roofed Berliner Philharmonie, built in 1963.'
+          description: 'Berlin, Germany’s capital, dates to the 13th century. The city\'s known for its art scene and modern landmarks.'
         },
         barcelona: {
           heading: 'SPAIN',
           title: 'BARCELONA',
           class: 'bg-barcelona',
-          description: 'Barcelona, the cosmopolitan capital of Spain’s Catalonia region, is known for its art and architecture. The fantastical Sagrada Família church and other modernist landmarks designed by Antoni Gaudí dot the city.'
+          description: 'Barcelona, the cosmopolitan capital of Spain’s Catalonia region, is known for its art and architecture.'
         },
         paris: {
           heading: 'FRANCE',
           title: 'PARIS',
           class: 'bg-paris',
-          description: 'Paris, France\'s capital, is a major European city and a global center for art, fashion, gastronomy and culture. Its 19th-century cityscape is crisscrossed by wide boulevards and the River Seine.'
+          description: 'Paris, France\'s capital, is a major European city and a global center for art, fashion, gastronomy and culture.'
         },
         amsterdam: {
           heading: 'NETHERLANDS',
           title: 'AMSTERDAM',
           class: 'bg-amsterdam',
-          description: 'Amsterdam is the Netherlands’ capital, known for its artistic heritage, elaborate canal system and narrow houses with gabled facades, legacies of the city’s 17th-century Golden Age.'
+          description: 'Amsterdam is the Netherlands’ capital, known for its artistic heritage and elaborate canal system.'
         },
         london: {
           heading: 'UNITED KINGDOM',
