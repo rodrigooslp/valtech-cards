@@ -84,9 +84,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.max-h-0 {
-  max-height: 0;
-}
-</style>

@@ -64,3 +64,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.max-h-0 {
+  max-height: 0;
+}
+</style>
