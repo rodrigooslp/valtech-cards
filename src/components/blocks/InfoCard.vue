@@ -5,15 +5,15 @@
       <div class="flex flex-col justify-center items-center h-full">
 
         <slot v-if="isContentDefault">
-          <card-title class="mb-2 title">{{ body.title }}</card-title>
-          <valtech-logo class="h-8 mt-1 mb-3"></valtech-logo>
-          <card-description class="mt-2 px-8 text-center md:px-56 description">{{ body.description }}</card-description>
+          <card-title class="mb-2">{{ body.title }}</card-title>
+          <valtech-logo class="mt-1 mb-3"></valtech-logo>
+          <card-description class="mt-2 px-8 md:px-56 text-center description">{{ body.description }}</card-description>
         </slot>
 
         <slot v-else>
           <div ref="title" class="flex flex-col justify-center items-center mt-8">
-            <card-title class="mb-2 title">{{ body.title }}</card-title>
-            <card-subtitle class="text-white font-semibold subtitle">{{ body.subtitle }}</card-subtitle>
+            <card-title class="mb-2">{{ body.title }}</card-title>
+            <card-subtitle>{{ body.subtitle }}</card-subtitle>
           </div>
 
           <card-description ref="description" class="opacity-0 mt-2 px-8 text-center flex-grow md:px-10 description">{{ body.description }}</card-description>

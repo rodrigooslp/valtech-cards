@@ -1,3 +1,3 @@
 <template>
-  <img :src="require('@/assets/img/logo.svg')">
+  <img class="h-8" :src="require('@/assets/img/logo.svg')" alt="valtech_">
 </template>
