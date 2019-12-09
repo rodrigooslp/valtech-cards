@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import InfoCard from '@/components/sets/InfoCard'
+import InfoCard from '@/components/items/InfoCard'
 
 export default {
   components: { InfoCard }
