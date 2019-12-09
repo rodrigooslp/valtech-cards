@@ -2,10 +2,8 @@
   <div class="w-full h-full relative">
     <card-background class="bg-center bg-cover w-full h-full absolute rounded-lg" :bg-class="body.class"></card-background>
 
-    <div class="h-full rounded-lg">
-      <default-card-content v-if="isContentDefault" :title="body.title" :text="body.description"></default-card-content>
-      <city-card-content v-else :title="body.title" :subtitle="body.subtitle" :text="body.description"></city-card-content>
-    </div>
+    <default-card-content v-if="isContentDefault" :title="body.title" :text="body.description"></default-card-content>
+    <city-card-content v-else :title="body.title" :subtitle="body.subtitle" :text="body.description"></city-card-content>
   </div>
 </template>
 
