@@ -1,30 +1,18 @@
 <template>
-  <div class="w-full h-full relative" @mouseenter="showEnterAnimation" @mouseleave="showLeaveAnimation">
+  <div class="w-full h-full relative">
     <card-background class="bg-center bg-cover w-full h-full absolute rounded-lg" :bg-class="body.class"></card-background>
-    <div ref="card" class="h-full overlay rounded-lg">
+
+    <div class="h-full rounded-lg">
       <default-card-content v-if="isContentDefault" :title="body.title" :text="body.description"></default-card-content>
-      <div v-else class="flex flex-col justify-center items-center h-full">
-
-        <div ref="title" class="flex flex-col justify-center items-center mt-8 mb-2">
-          <card-title class="mb-2">{{ body.title }}</card-title>
-          <card-subtitle>{{ body.subtitle }}</card-subtitle>
-        </div>
-
-        <card-description ref="description" class="max-h-0 opacity-0">{{ body.description }}</card-description>
-        <card-button ref="button" class="mt-3 mb-6 opacity-0">Explore More</card-button>
-      </div>
+      <city-card-content v-else :title="body.title" :subtitle="body.subtitle" :text="body.description"></city-card-content>
     </div>
   </div>
 </template>
 
 <script>
-import { gsap } from 'gsap'
-import CardTitle from '@/components/elements/CardTitle'
-import CardSubtitle from '@/components/elements/CardSubtitle'
-import CardDescription from '@/components/elements/CardDescription'
-import CardButton from '@/components/elements/CardButton'
 import CardBackground from '@/components/elements/CardBackground'
 import DefaultCardContent from '@/components/blocks/DefaultCardContent'
+import CityCardContent from '@/components/blocks/CityCardContent'
 
 export default {
   props: {
@@ -34,28 +22,9 @@ export default {
     }
   },
   components: {
-    CardTitle,
-    CardSubtitle,
-    CardDescription,
-    CardButton,
     CardBackground,
-    DefaultCardContent
-  },
-  mounted () {
-    const { title, description, button, card } = this.$refs
-    const timeline = gsap.timeline({ paused: true })
-
-    if (title && description && button) {
-      timeline
-        .add().to(card, { backgroundImage: 'linear-gradient(#525252bf, #525252bf)', duration: 0.3 })
-        .add().to(title, { y: '-0.5rem', duration: 0.3, ease: 'power3.out' }, '-=0.3')
-        .add().to(description.$el, { maxHeight: '100%', opacity: 1, duration: 0.8, ease: 'sin.out' }, '-=0.2')
-        .add().to(button.$el, { opacity: 1, duration: 0.2, ease: 'sin.out' }, '-=0.7')
-
-      timeline.progress(1).progress(0)
-    }
-
-    this.timeline = timeline
+    DefaultCardContent,
+    CityCardContent
   },
   computed: {
     isContentDefault () {
@@ -68,17 +37,8 @@ export default {
       return body || this.text.default
     }
   },
-  methods: {
-    showEnterAnimation () {
-      this.timeline.play()
-    },
-    showLeaveAnimation () {
-      this.timeline.reverse()
-    }
-  },
   data () {
     return {
-      timeline: null,
       text: {
         default: {
           title: 'FRONT-END',
@@ -131,9 +91,4 @@ export default {
 .max-h-0 {
   max-height: 0;
 }
-
-.overlay {
-  background-image: linear-gradient(#33333380, #33333380);
-}
-
 </style>
