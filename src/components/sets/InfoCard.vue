@@ -2,23 +2,16 @@
   <div class="w-full h-full relative" @mouseenter="showEnterAnimation" @mouseleave="showLeaveAnimation">
     <card-background class="bg-center bg-cover w-full h-full absolute rounded-lg" :bg-class="body.class"></card-background>
     <div ref="card" class="h-full overlay rounded-lg">
-      <div class="flex flex-col justify-center items-center h-full">
+      <default-card-content v-if="isContentDefault" :title="body.title" :text="body.description"></default-card-content>
+      <div v-else class="flex flex-col justify-center items-center h-full">
 
-        <slot v-if="isContentDefault">
-          <card-title>{{ body.title }}</card-title>
-          <valtech-logo class="mt-3 mb-5"></valtech-logo>
-          <card-text>{{ body.description }}</card-text>
-        </slot>
+        <div ref="title" class="flex flex-col justify-center items-center mt-8">
+          <card-title class="mb-2">{{ body.title }}</card-title>
+          <card-subtitle>{{ body.subtitle }}</card-subtitle>
+        </div>
 
-        <slot v-else>
-          <div ref="title" class="flex flex-col justify-center items-center mt-8">
-            <card-title class="mb-2">{{ body.title }}</card-title>
-            <card-subtitle>{{ body.subtitle }}</card-subtitle>
-          </div>
-
-          <card-description ref="description" class="opacity-0 mt-2 px-8 text-center flex-grow md:px-10 description">{{ body.description }}</card-description>
-          <card-button ref="button" class="opacity-0 text-white border border-solid border-white px-4 py-1 mt-3 rounded focus:outline-none mb-6 button">Explore More</card-button>
-        </slot>
+        <card-description ref="description" class="opacity-0 mt-2 px-8 text-center flex-grow md:px-10 description">{{ body.description }}</card-description>
+        <card-button ref="button" class="opacity-0 text-white border border-solid border-white px-4 py-1 mt-3 rounded focus:outline-none mb-6 button">Explore More</card-button>
       </div>
     </div>
   </div>
@@ -28,11 +21,10 @@
 import { gsap } from 'gsap'
 import CardTitle from '@/components/elements/CardTitle'
 import CardSubtitle from '@/components/elements/CardSubtitle'
-import CardText from '@/components/elements/CardText'
 import CardDescription from '@/components/elements/CardDescription'
 import CardButton from '@/components/elements/CardButton'
 import CardBackground from '@/components/elements/CardBackground'
-import ValtechLogo from '@/components/elements/ValtechLogo'
+import DefaultCardContent from '@/components/blocks/DefaultCardContent'
 
 export default {
   props: {
@@ -44,11 +36,10 @@ export default {
   components: {
     CardTitle,
     CardSubtitle,
-    CardText,
     CardDescription,
     CardButton,
     CardBackground,
-    ValtechLogo
+    DefaultCardContent
   },
   mounted () {
     const { title, description, button, card } = this.$refs
