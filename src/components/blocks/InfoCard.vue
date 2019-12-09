@@ -1,23 +1,23 @@
 <template>
   <div class="w-full h-full relative" @mouseenter="showEnterAnimation" @mouseleave="showLeaveAnimation">
-    <div class="bg-center bg-cover w-full h-full absolute rounded-lg" :class="body.class"></div>
+    <card-background class="bg-center bg-cover w-full h-full absolute rounded-lg" :bg-class="body.class"></card-background>
     <div ref="card" class="h-full overlay rounded-lg">
       <div class="flex flex-col justify-center items-center h-full">
 
         <slot v-if="isContentDefault">
-          <h2 class="mb-2 heading">{{ body.title }}</h2>
-          <img class="h-8 mt-1 mb-3" :src="require('@/assets/img/logo.svg')">
-          <h4 class="mt-2 px-8 text-center md:px-56 description">{{ body.description }}</h4>
+          <card-title class="mb-2 title">{{ body.title }}</card-title>
+          <valtech-logo class="h-8 mt-1 mb-3"></valtech-logo>
+          <card-description class="mt-2 px-8 text-center md:px-56 description">{{ body.description }}</card-description>
         </slot>
 
         <slot v-else>
           <div ref="title" class="flex flex-col justify-center items-center mt-8">
-            <h2 class="mb-2 heading">{{ body.title }}</h2>
-            <h1 class="text-white font-semibold title">{{ body.subtitle }}</h1>
+            <card-title class="mb-2 title">{{ body.title }}</card-title>
+            <card-subtitle class="text-white font-semibold subtitle">{{ body.subtitle }}</card-subtitle>
           </div>
 
-          <h4 ref="description" class="opacity-0 mt-2 px-8 text-center flex-grow md:px-10 description">{{ body.description }}</h4>
-          <button ref="button" class="opacity-0 text-white border border-solid border-white px-4 py-1 mt-3 rounded focus:outline-none mb-6 button">Explore More</button>
+          <card-description ref="description" class="opacity-0 mt-2 px-8 text-center flex-grow md:px-10 description">{{ body.description }}</card-description>
+          <card-button ref="button" class="opacity-0 text-white border border-solid border-white px-4 py-1 mt-3 rounded focus:outline-none mb-6 button">Explore More</card-button>
         </slot>
       </div>
     </div>
@@ -26,9 +26,12 @@
 
 <script>
 import { gsap } from 'gsap'
-// import CardTitle from '@/components/elements/CardTitle'
-// import CardDescription from '@/components/elements/CardDescription'
-// import ValtechLogo from '@/components/elements/ValtechLogo'
+import CardTitle from '@/components/elements/CardTitle'
+import CardSubtitle from '@/components/elements/CardSubtitle'
+import CardDescription from '@/components/elements/CardDescription'
+import CardButton from '@/components/elements/CardButton'
+import CardBackground from '@/components/elements/CardBackground'
+import ValtechLogo from '@/components/elements/ValtechLogo'
 
 export default {
   props: {
@@ -37,11 +40,14 @@ export default {
       default: 'default'
     }
   },
-  // components: {
-  //   CardTitle,
-  //   CardDescription,
-  //   ValtechLogo
-  // },
+  components: {
+    CardTitle,
+    CardSubtitle,
+    CardDescription,
+    CardButton,
+    CardBackground,
+    ValtechLogo
+  },
   mounted () {
     const { title, description, button, card } = this.$refs
     const timeline = gsap.timeline({ paused: true })
@@ -53,9 +59,9 @@ export default {
         .add()
         .to(title, { y: '-0.5rem', duration: 0.3, ease: 'power3.out' }, '-=0.3')
         .add()
-        .to(description, { maxHeight: '100%', opacity: 1, duration: 0.8, ease: 'sin.out' }, '-=0.2')
+        .to(description.$el, { maxHeight: '100%', opacity: 1, duration: 0.8, ease: 'sin.out' }, '-=0.2')
         .add()
-        .to(button, { opacity: 1, duration: 0.2, ease: 'sin.out' }, '-=0.7')
+        .to(button.$el, { opacity: 1, duration: 0.2, ease: 'sin.out' }, '-=0.7')
 
       timeline.progress(1).progress(0)
     }
@@ -139,11 +145,11 @@ export default {
   padding-bottom: 0.35rem;
 }
 
-.title {
+.subtitle {
   font-size: 1.6rem;
 }
 
-.heading {
+.title {
   color: #ffffffbf;
 }
 
