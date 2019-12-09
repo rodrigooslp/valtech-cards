@@ -5,13 +5,13 @@
       <default-card-content v-if="isContentDefault" :title="body.title" :text="body.description"></default-card-content>
       <div v-else class="flex flex-col justify-center items-center h-full">
 
-        <div ref="title" class="flex flex-col justify-center items-center mt-8">
+        <div ref="title" class="flex flex-col justify-center items-center mt-8 mb-2">
           <card-title class="mb-2">{{ body.title }}</card-title>
           <card-subtitle>{{ body.subtitle }}</card-subtitle>
         </div>
 
-        <card-description ref="description" class="opacity-0 mt-2 px-8 text-center flex-grow md:px-10 description">{{ body.description }}</card-description>
-        <card-button ref="button" class="opacity-0 text-white border border-solid border-white px-4 py-1 mt-3 rounded focus:outline-none mb-6 button">Explore More</card-button>
+        <card-description ref="description" class="max-h-0 opacity-0">{{ body.description }}</card-description>
+        <card-button ref="button" class="mt-3 mb-6 opacity-0">Explore More</card-button>
       </div>
     </div>
   </div>
@@ -47,14 +47,10 @@ export default {
 
     if (title && description && button) {
       timeline
-        .add()
-        .to(card, { backgroundImage: 'linear-gradient(#525252bf, #525252bf)', duration: 0.3 })
-        .add()
-        .to(title, { y: '-0.5rem', duration: 0.3, ease: 'power3.out' }, '-=0.3')
-        .add()
-        .to(description.$el, { maxHeight: '100%', opacity: 1, duration: 0.8, ease: 'sin.out' }, '-=0.2')
-        .add()
-        .to(button.$el, { opacity: 1, duration: 0.2, ease: 'sin.out' }, '-=0.7')
+        .add().to(card, { backgroundImage: 'linear-gradient(#525252bf, #525252bf)', duration: 0.3 })
+        .add().to(title, { y: '-0.5rem', duration: 0.3, ease: 'power3.out' }, '-=0.3')
+        .add().to(description.$el, { maxHeight: '100%', opacity: 1, duration: 0.8, ease: 'sin.out' }, '-=0.2')
+        .add().to(button.$el, { opacity: 1, duration: 0.2, ease: 'sin.out' }, '-=0.7')
 
       timeline.progress(1).progress(0)
     }
@@ -132,24 +128,8 @@ export default {
 </script>
 
 <style lang="scss">
-.button {
-  font-size: 0.95rem;
-  padding-top: 0.35rem;
-  padding-bottom: 0.35rem;
-}
-
-.subtitle {
-  font-size: 1.6rem;
-}
-
-.title {
-  color: #ffffffbf;
-}
-
-.description {
+.max-h-0 {
   max-height: 0;
-  font-size: 0.95rem;
-  color: #ffffffbf;
 }
 
 .overlay {
