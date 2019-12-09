@@ -5,15 +5,15 @@
       <div class="flex flex-col justify-center items-center h-full">
 
         <slot v-if="isContentDefault">
-          <h2 class="mb-2 heading">{{ body.heading }}</h2>
+          <h2 class="mb-2 heading">{{ body.title }}</h2>
           <img class="h-8 mt-1 mb-3" :src="require('@/assets/img/logo.svg')">
           <h4 class="mt-2 px-8 text-center md:px-56 description">{{ body.description }}</h4>
         </slot>
 
         <slot v-else>
           <div ref="title" class="flex flex-col justify-center items-center mt-8">
-            <h2 class="mb-2 heading">{{ body.heading }}</h2>
-            <h1 class="text-white font-semibold title">{{ body.title }}</h1>
+            <h2 class="mb-2 heading">{{ body.title }}</h2>
+            <h1 class="text-white font-semibold title">{{ body.subtitle }}</h1>
           </div>
 
           <h4 ref="description" class="opacity-0 mt-2 px-8 text-center flex-grow md:px-10 description">{{ body.description }}</h4>
@@ -26,6 +26,9 @@
 
 <script>
 import { gsap } from 'gsap'
+// import CardTitle from '@/components/elements/CardTitle'
+// import CardDescription from '@/components/elements/CardDescription'
+// import ValtechLogo from '@/components/elements/ValtechLogo'
 
 export default {
   props: {
@@ -34,6 +37,11 @@ export default {
       default: 'default'
     }
   },
+  // components: {
+  //   CardTitle,
+  //   CardDescription,
+  //   ValtechLogo
+  // },
   mounted () {
     const { title, description, button, card } = this.$refs
     const timeline = gsap.timeline({ paused: true })
@@ -78,43 +86,43 @@ export default {
       timeline: null,
       text: {
         default: {
-          heading: 'FRONT-END',
+          title: 'FRONT-END',
           class: 'bg-default',
           description: 'Lorem ipsun dolor sit a met lorem dolor sit a met factius lorem ipsun dolor sit a met ipsun lorem amet'
         },
         venice: {
-          heading: 'ITALY',
-          title: 'VENICE',
+          title: 'ITALY',
+          subtitle: 'VENICE',
           class: 'bg-venice',
           description: 'Venice, the capital of northern Italy\'s Veneto region, is built on more than 100 small islands in a lagoon in the Adriatic Sea. It has no roads, just canals.'
         },
         berlin: {
-          heading: 'GERMANY',
-          title: 'BERLIN',
+          title: 'GERMANY',
+          subtitle: 'BERLIN',
           class: 'bg-berlin',
           description: 'Berlin, Germany’s capital, dates to the 13th century. The city\'s known for its art scene and modern landmarks.'
         },
         barcelona: {
-          heading: 'SPAIN',
-          title: 'BARCELONA',
+          title: 'SPAIN',
+          subtitle: 'BARCELONA',
           class: 'bg-barcelona',
           description: 'Barcelona, the cosmopolitan capital of Spain’s Catalonia region, is known for its art and architecture.'
         },
         paris: {
-          heading: 'FRANCE',
-          title: 'PARIS',
+          title: 'FRANCE',
+          subtitle: 'PARIS',
           class: 'bg-paris',
           description: 'Paris, France\'s capital, is a major European city and a global center for art, fashion, gastronomy and culture.'
         },
         amsterdam: {
-          heading: 'NETHERLANDS',
-          title: 'AMSTERDAM',
+          title: 'NETHERLANDS',
+          subtitle: 'AMSTERDAM',
           class: 'bg-amsterdam',
           description: 'Amsterdam is the Netherlands’ capital, known for its artistic heritage and elaborate canal system.'
         },
         london: {
-          heading: 'UNITED KINGDOM',
-          title: 'LONDON',
+          title: 'UNITED KINGDOM',
+          subtitle: 'LONDON',
           class: 'bg-london',
           description: 'London, the capital of England and the United Kingdom, is a 21st-century city with history stretching back to Roman times.'
         }
