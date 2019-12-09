@@ -5,9 +5,9 @@
       <div class="flex flex-col justify-center items-center h-full">
 
         <slot v-if="isContentDefault">
-          <card-title class="mb-2">{{ body.title }}</card-title>
-          <valtech-logo class="mt-1 mb-3"></valtech-logo>
-          <card-description class="mt-2 px-8 md:px-56 text-center description">{{ body.description }}</card-description>
+          <card-title>{{ body.title }}</card-title>
+          <valtech-logo class="mt-3 mb-5"></valtech-logo>
+          <card-text>{{ body.description }}</card-text>
         </slot>
 
         <slot v-else>
@@ -28,6 +28,7 @@
 import { gsap } from 'gsap'
 import CardTitle from '@/components/elements/CardTitle'
 import CardSubtitle from '@/components/elements/CardSubtitle'
+import CardText from '@/components/elements/CardText'
 import CardDescription from '@/components/elements/CardDescription'
 import CardButton from '@/components/elements/CardButton'
 import CardBackground from '@/components/elements/CardBackground'
@@ -43,6 +44,7 @@ export default {
   components: {
     CardTitle,
     CardSubtitle,
+    CardText,
     CardDescription,
     CardButton,
     CardBackground,
