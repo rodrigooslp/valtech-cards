@@ -1,6 +1,6 @@
 <template>
   <div class="card card--position-relative">
-    <card-background class="card__background--position-absolute" :bg-class="body.class" />
+    <card-background class="card__background--position-absolute" :background-modifier="body.modifier" />
 
     <card-default-content v-if="isDefaultContent" :title="body.title" :text="body.description" />
     <card-city-content v-else :title="body.title" :subtitle="body.subtitle" :text="body.description" />
@@ -40,43 +40,42 @@ export default {
       text: {
         default: {
           title: 'FRONT-END',
-          class: 'card__background--default',
           description: 'Lorem ipsun dolor sit a met lorem dolor sit a met factius lorem ipsun dolor sit a met ipsun lorem amet'
         },
         venice: {
           title: 'ITALY',
           subtitle: 'VENICE',
-          class: 'card__background--venice',
+          modifier: 'venice',
           description: 'Venice, the capital of northern Italy\'s Veneto region, is built on more than 100 small islands in a lagoon in the Adriatic Sea. It has no roads, just canals.'
         },
         berlin: {
           title: 'GERMANY',
           subtitle: 'BERLIN',
-          class: 'card__background--berlin',
+          modifier: 'berlin',
           description: 'Berlin, Germany’s capital, dates to the 13th century. The city\'s known for its art scene and modern landmarks.'
         },
         barcelona: {
           title: 'SPAIN',
           subtitle: 'BARCELONA',
-          class: 'card__background--barcelona',
+          modifier: 'barcelona',
           description: 'Barcelona, the cosmopolitan capital of Spain’s Catalonia region, is known for its art and architecture.'
         },
         paris: {
           title: 'FRANCE',
           subtitle: 'PARIS',
-          class: 'card__background--paris',
+          modifier: 'paris',
           description: 'Paris, France\'s capital, is a major European city and a global center for art, fashion, gastronomy and culture.'
         },
         amsterdam: {
           title: 'NETHERLANDS',
           subtitle: 'AMSTERDAM',
-          class: 'card__background--amsterdam',
+          modifier: 'amsterdam',
           description: 'Amsterdam is the Netherlands’ capital, known for its artistic heritage and elaborate canal system.'
         },
         london: {
           title: 'UNITED KINGDOM',
           subtitle: 'LONDON',
-          class: 'card__background--london',
+          modifier: 'london',
           description: 'London, the capital of England and the United Kingdom, is a 21st-century city with history stretching back to Roman times.'
         }
       }

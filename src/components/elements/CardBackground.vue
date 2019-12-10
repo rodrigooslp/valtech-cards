@@ -1,18 +1,23 @@
 <template>
-  <div class="card__background" :class="bgClass"></div>
+  <div class="card__background" :class="backgroundClass"></div>
 </template>
 
 <script>
 export default {
   props: {
-    bgClass: {
-      type: String
+    backgroundModifier: String
+  },
+  computed: {
+    backgroundClass () {
+      return `card__background--${this.backgroundModifier}`
     }
   }
 }
 </script>
 
 <style lang="scss">
+$modifiers: 'venice', 'berlin', 'barcelona', 'paris', 'amsterdam', 'london';
+
 .card__background {
   width: 100%;
   height: 100%;
@@ -27,66 +32,27 @@ export default {
 }
 
 .webp {
-  .card__background--default {
+  .card__background {
     background-image: url('../../assets/img/bg-default.webp');
   }
 
-  .card__background--venice {
-    background-image: url('../../assets/img/bg-venice.webp');
-  }
-
-  .card__background--venice {
-    background-image: url('../../assets/img/bg-venice.webp');
-  }
-
-  .card__background--berlin {
-    background-image: url('../../assets/img/bg-berlin.webp');
-  }
-
-  .card__background--barcelona {
-    background-image: url('../../assets/img/bg-barcelona.webp');
-  }
-
-  .card__background--paris {
-    background-image: url('../../assets/img/bg-paris.webp');
-  }
-
-  .card__background--amsterdam {
-    background-image: url('../../assets/img/bg-amsterdam.webp');
-  }
-
-  .card__background--london {
-    background-image: url('../../assets/img/bg-london.webp');
+  @each $modifier in $modifiers {
+    .card__background--#{$modifier} {
+      background-image: url('../../assets/img/bg-#{$modifier}.webp');
+    }
   }
 }
 
 .no-webp {
-  .card__background--default {
+  .card__background {
     background-image: url('../../assets/img/bg-default.jpg');
   }
 
-  .card__background--venice {
-    background-image: url('../../assets/img/bg-venice.jpg');
-  }
-
-  .card__background--berlin {
-    background-image: url('../../assets/img/bg-berlin.jpg');
-  }
-
-  .card__background--barcelona {
-    background-image: url('../../assets/img/bg-barcelona.jpg');
-  }
-
-  .card__background--paris {
-    background-image: url('../../assets/img/bg-paris.jpg');
-  }
-
-  .card__background--amsterdam {
-    background-image: url('../../assets/img/bg-amsterdam.jpg');
-  }
-
-  .card__background--london {
-    background-image: url('../../assets/img/bg-london.jpg');
+  @each $modifier in $modifiers {
+    .card__background--#{$modifier} {
+      background-image: url('../../assets/img/bg-#{$modifier}.jpg');
+    }
   }
 }
+
 </style>
