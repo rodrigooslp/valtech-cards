@@ -1,9 +1,11 @@
 <template>
-  <h1 class="text-white font-semibold subtitle-text"><slot></slot></h1>
+  <h1 class="card__subtitle"><slot></slot></h1>
 </template>
 
 <style>
-.subtitle-text {
+.card__subtitle {
+  color: #fff;
   font-size: 1.6rem;
+  font-weight: 600;
 }
 </style>

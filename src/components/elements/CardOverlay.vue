@@ -1,13 +1,17 @@
 <template>
-  <div class="w-full h-full rounded-lg bg-overlay overlay-index"></div>
+  <div class="card__overlay"></div>
 </template>
 
 <style>
-.bg-overlay {
+.card__overlay {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
   background-image: linear-gradient(#33333380, #33333380);
+  z-index: -1;
 }
 
-.overlay-index {
-  z-index: -1;
+.card__overlay--absolute {
+  position: absolute;
 }
 </style>

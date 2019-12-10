@@ -1,11 +1,11 @@
 <template>
 <div class="flex flex-col justify-center items-center h-full relative" @mouseenter="showEnterAnimation" @mouseleave="showLeaveAnimation">
-  <card-overlay ref="card" class="absolute"></card-overlay>
+  <card-overlay ref="card" class="card__overlay--absolute"></card-overlay>
 
   <city-card-header ref="header" class="mt-8 mb-2" :title="title" :subtitle="subtitle"></city-card-header>
-  <card-description ref="description" class="max-h-0 opacity-0">{{ text }}</card-description>
+  <card-description ref="description" class="card__description--zero-height card__description--zero-opacity card__description--grow">{{ text }}</card-description>
 
-  <card-button ref="button" class="mt-3 mb-6 opacity-0 invisible">Explore More</card-button>
+  <card-button ref="button" class="mt-3 mb-6 card__button--invisible card__button--zero-opacity">Explore More</card-button>
 </div>
 </template>
 
@@ -64,9 +64,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.max-h-0 {
-  max-height: 0;
-}
-</style>

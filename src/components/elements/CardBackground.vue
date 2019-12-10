@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-index" :class="bgClass"></div>
+  <div class="card__background" :class="bgClass"></div>
 </template>
 
 <script>
@@ -13,70 +13,70 @@ export default {
 </script>
 
 <style lang="scss">
-.bg-index {
+.card__background {
   z-index: -2;
 }
 
 .webp {
-  .bg-default {
+  .card__background--default {
     background-image: url('../../assets/img/bg-default.webp');
   }
 
-  .bg-venice {
+  .card__background--venice {
     background-image: url('../../assets/img/bg-venice.webp');
   }
 
-  .bg-venice {
+  .card__background--venice {
     background-image: url('../../assets/img/bg-venice.webp');
   }
 
-  .bg-berlin {
+  .card__background--berlin {
     background-image: url('../../assets/img/bg-berlin.webp');
   }
 
-  .bg-barcelona {
+  .card__background--barcelona {
     background-image: url('../../assets/img/bg-barcelona.webp');
   }
 
-  .bg-paris {
+  .card__background--paris {
     background-image: url('../../assets/img/bg-paris.webp');
   }
 
-  .bg-amsterdam {
+  .card__background--amsterdam {
     background-image: url('../../assets/img/bg-amsterdam.webp');
   }
 
-  .bg-london {
+  .card__background--london {
     background-image: url('../../assets/img/bg-london.webp');
   }
 }
 
 .no-webp {
-  .bg-default {
+  .card__background--default {
     background-image: url('../../assets/img/bg-default.jpg');
   }
 
-  .bg-venice {
+  .card__background--venice {
     background-image: url('../../assets/img/bg-venice.jpg');
   }
 
-  .bg-berlin {
+  .card__background--berlin {
     background-image: url('../../assets/img/bg-berlin.jpg');
   }
 
-  .bg-barcelona {
+  .card__background--barcelona {
     background-image: url('../../assets/img/bg-barcelona.jpg');
   }
 
-  .bg-paris {
+  .card__background--paris {
     background-image: url('../../assets/img/bg-paris.jpg');
   }
 
-  .bg-amsterdam {
+  .card__background--amsterdam {
     background-image: url('../../assets/img/bg-amsterdam.jpg');
   }
 
-  .bg-london {
+  .card__background--london {
     background-image: url('../../assets/img/bg-london.jpg');
   }
 }
