@@ -1,11 +1,11 @@
 <template>
-  <div class="flex flex-col justify-center items-center h-full relative" @mouseenter="showEnterAnimation" @mouseleave="showLeaveAnimation">
-    <card-overlay ref="card" class="card__overlay--absolute"></card-overlay>
+  <div class="card__content-city card__content-city--position-relative" @mouseenter="showEnterAnimation" @mouseleave="showLeaveAnimation">
+    <card-overlay ref="card" class="card__overlay--position-absolute"></card-overlay>
 
     <card-header-city ref="header" class="mt-8 mb-2" :title="title" :subtitle="subtitle"></card-header-city>
     <card-description ref="description" class="card__description--zero-height card__description--zero-opacity card__description--grow">{{ text }}</card-description>
 
-    <card-button ref="button" class="mt-3 mb-6 card__button--invisible card__button--zero-opacity">Explore More</card-button>
+    <card-button ref="button" class="card__button--invisible card__button--zero-opacity">Explore More</card-button>
   </div>
 </template>
 
@@ -64,3 +64,18 @@ export default {
   }
 }
 </script>
+
+<style>
+.card__content-city {
+  height: 100%;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__content-city--position-relative {
+  position: relative;
+}
+</style>

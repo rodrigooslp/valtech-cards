@@ -14,6 +14,8 @@
   padding-bottom: 0.35rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .card__button:focus {

@@ -11,7 +11,7 @@
   z-index: -1;
 }
 
-.card__overlay--absolute {
+.card__overlay--position-absolute {
   position: absolute;
 }
 </style>

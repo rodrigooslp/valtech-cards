@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col justify-center items-center h-full rounded-lg relative">
-    <card-overlay ref="card" class="absolute"></card-overlay>
+  <div class="card__content-default card__content-default--position-relative">
+    <card-overlay ref="card" class="card__overlay--position-absolute"></card-overlay>
 
     <card-title>{{ title }}</card-title>
     <valtech-logo class="mt-3 mb-5"></valtech-logo>
@@ -31,3 +31,18 @@ export default {
   }
 }
 </script>
+
+<style>
+  .card__content-default {
+    height: 100%;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card__content-default--position-relative {
+    position: relative;
+  }
+</style>
