@@ -1,9 +1,9 @@
 <template>
-  <div class="w-full h-full relative">
-    <card-background class="bg-center bg-cover w-full h-full absolute rounded-lg" :bg-class="body.class"></card-background>
+  <div class="card card--position-relative">
+    <card-background class="card__background--position-absolute" :bg-class="body.class" />
 
-    <card-default-content v-if="isDefaultContent" :title="body.title" :text="body.description"></card-default-content>
-    <card-city-content v-else :title="body.title" :subtitle="body.subtitle" :text="body.description"></card-city-content>
+    <card-default-content v-if="isDefaultContent" :title="body.title" :text="body.description" />
+    <card-city-content v-else :title="body.title" :subtitle="body.subtitle" :text="body.description" />
   </div>
 </template>
 
@@ -84,3 +84,14 @@ export default {
   }
 }
 </script>
+
+<style>
+.card {
+  width: 100%;
+  height: 100%;
+}
+
+.card--position-relative {
+  position: relative;
+}
+</style>

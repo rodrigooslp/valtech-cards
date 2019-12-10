@@ -14,7 +14,16 @@ export default {
 
 <style lang="scss">
 .card__background {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  background-position: center;
+  background-size: cover;
   z-index: -2;
+}
+
+.card__background--position-absolute {
+  position: absolute;
 }
 
 .webp {
