@@ -1,9 +1,9 @@
 <template>
   <div class="card card--position-relative">
-    <card-background class="card__background--position-absolute" :background-modifier="body.modifier" />
+    <card-background class="card__background--position-absolute" :background-modifier="item.modifier" />
 
-    <card-default-content v-if="isDefaultContent" :title="body.title" :text="body.description" />
-    <card-city-content v-else :title="body.title" :subtitle="body.subtitle" :text="body.description" />
+    <card-default-content v-if="isDefaultContent" :title="item.title" :text="item.description" />
+    <card-city-content v-else :title="item.title" :subtitle="item.subtitle" :text="item.description" />
   </div>
 </template>
 
@@ -14,10 +14,7 @@ import CardCityContent from '@/components/blocks/CardCityContent'
 
 export default {
   props: {
-    content: {
-      type: String,
-      default: 'default'
-    }
+    content: String
   },
   components: {
     CardBackground,
@@ -26,18 +23,18 @@ export default {
   },
   computed: {
     isDefaultContent () {
-      return this.body === this.text.default
+      return this.item === this.info.default
     },
 
-    body () {
+    item () {
       const key = this.content
-      const body = this.text[key]
-      return body || this.text.default
+      const item = this.info[key]
+      return item || this.info.default
     }
   },
   data () {
     return {
-      text: {
+      info: {
         default: {
           title: 'FRONT-END',
           description: 'Lorem ipsun dolor sit a met lorem dolor sit a met factius lorem ipsun dolor sit a met ipsun lorem amet'
