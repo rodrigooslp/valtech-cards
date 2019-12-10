@@ -25,5 +25,10 @@
   @at-root &--zero-opacity{
     opacity: 0;
   }
+
+  @at-root &--position-bottom {
+    position: absolute;
+    bottom: 0;
+  }
 }
 </style>

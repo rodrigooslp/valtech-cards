@@ -23,7 +23,7 @@
 
     <card-button
       ref="button"
-      class="card__button--invisible card__button--zero-opacity"
+      class="card__button--position-bottom card__button--invisible card__button--zero-opacity"
     >
       Explore More
     </card-button>
