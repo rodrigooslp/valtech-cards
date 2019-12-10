@@ -25,10 +25,10 @@ $modifiers: 'venice', 'berlin', 'barcelona', 'paris', 'amsterdam', 'london';
   background-position: center;
   background-size: cover;
   z-index: -2;
-}
 
-.card__background--position-absolute {
-  position: absolute;
+  @at-root &--position-absolute {
+    position: absolute;
+  }
 }
 
 .webp {

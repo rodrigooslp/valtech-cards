@@ -4,31 +4,26 @@
   </button>
 </template>
 
-<style>
+<style lang="scss">
 .card__button {
   color: #fff;
   font-size: 0.95rem;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #fff;
+  border: 1px solid #fff;
   border-radius: 0.25rem;
-  padding-top: 0.35rem;
-  padding-bottom: 0.35rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 0.35rem 1rem;
   margin-top: 0.75rem;
   margin-bottom: 1.5rem;
-}
 
-.card__button:focus {
-  outline: none;
-}
+  @at-root &:focus {
+    outline: none;
+  }
 
-.card__button--invisible {
-  visibility: hidden;
-}
+  @at-root &--invisible {
+    visibility: hidden;
+  }
 
-.card__button--zero-opacity{
-  opacity: 0;
+  @at-root &--zero-opacity{
+    opacity: 0;
+  }
 }
 </style>

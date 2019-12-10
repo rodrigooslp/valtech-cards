@@ -86,7 +86,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .card__city-content {
   height: 20rem;
   border-radius: 0.5rem;
@@ -94,10 +94,10 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 
-.card__city-content--position-relative {
-  position: relative;
+  @at-root &--position-relative {
+    position: relative;
+  }
 }
 
 @media (min-width: 768px) {

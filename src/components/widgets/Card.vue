@@ -94,13 +94,13 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .card {
   width: 100%;
   height: 100%;
-}
 
-.card--position-relative {
-  position: relative;
+  @at-root &--position-relative {
+    position: relative;
+  }
 }
 </style>
