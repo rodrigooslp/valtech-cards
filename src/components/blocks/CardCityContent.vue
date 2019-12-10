@@ -64,7 +64,7 @@ export default {
       .add().to(card.$el, { backgroundImage: 'linear-gradient(#525252bf, #525252bf)', duration: 0.3 })
       .add().to(header.$el, { y: '-0.5rem', duration: 0.3, ease: 'power3.out' }, '-=0.3')
       .add().to(description.$el, { maxHeight: '100%', opacity: 1, duration: 0.8, ease: 'sin.out' }, '-=0.2')
-      .add().to(button.$el, { opacity: 1, visibility: 'visible', duration: 0.2, ease: 'sin.out' }, '-=0.7')
+      .add().to(button.$el, { opacity: 1, visibility: 'visible', duration: 0.5, ease: 'sin.out' }, '-=0.7')
 
     timeline.progress(1).progress(0)
 
