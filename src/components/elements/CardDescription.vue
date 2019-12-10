@@ -11,6 +11,7 @@
   color: #ffffffbf;
   padding-left: 2rem;
   padding-right: 2rem;
+  line-height: 1.2rem;
 
   @at-root &--grow {
     flex-grow: 1;

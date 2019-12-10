@@ -9,6 +9,7 @@ export default {
   },
   computed: {
     backgroundClass () {
+      if (!this.backgroundModifier) return
       return `card__background--${this.backgroundModifier}`
     }
   }

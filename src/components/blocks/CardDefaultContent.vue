@@ -1,6 +1,6 @@
 <template>
   <div class="card__default-content card__default-content--position-relative">
-    <card-overlay class="card__overlay--position-absolute" />
+    <card-overlay class="card__overlay--color-light card__overlay--position-absolute" />
 
     <card-title>{{ title }}</card-title>
     <valtech-logo />

@@ -1,5 +1,5 @@
 <template>
-  <div class="landing-page container md:px-40 md:mx-auto">
+  <div class="landing-page container lg:px-16 xl:px-40">
     <div class="landing-page__content">
 
       <div class="md:flex md:flex-row md:-mx-3">
@@ -48,6 +48,8 @@ export default {
 .landing-page {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
 
   @at-root &__content {
     display: flex;
