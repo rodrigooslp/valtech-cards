@@ -1,5 +1,9 @@
 <template>
-  <img class="card__valtech-logo" :src="require('@/assets/img/logo.svg')" alt="valtech_">
+  <img
+    class="card__valtech-logo"
+    :src="require('@/assets/img/logo.svg')"
+    alt="valtech_"
+  >
 </template>
 
 <style>

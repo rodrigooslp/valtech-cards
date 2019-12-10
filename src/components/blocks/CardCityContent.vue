@@ -1,11 +1,32 @@
 <template>
-  <div class="card__city-content card__city-content--position-relative" @mouseenter="showEnterAnimation" @mouseleave="showLeaveAnimation">
-    <card-overlay ref="card" class="card__overlay--position-absolute" />
+  <div class="card__city-content card__city-content--position-relative"
+    @mouseenter="showEnterAnimation"
+    @mouseleave="showLeaveAnimation"
+  >
+    <card-overlay
+      ref="card"
+      class="card__overlay--position-absolute"
+    />
 
-    <card-city-header ref="header" :title="title" :subtitle="subtitle" />
-    <card-description ref="description" class="card__description--zero-height card__description--zero-opacity card__description--grow">{{ text }}</card-description>
+    <card-city-header
+      ref="header"
+      :title="title"
+      :subtitle="subtitle"
+    />
 
-    <card-button ref="button" class="card__button--invisible card__button--zero-opacity">Explore More</card-button>
+    <card-description
+      ref="description"
+      class="card__description--zero-height card__description--zero-opacity card__description--grow"
+    >
+      {{ text }}
+    </card-description>
+
+    <card-button
+      ref="button"
+      class="card__button--invisible card__button--zero-opacity"
+    >
+      Explore More
+    </card-button>
   </div>
 </template>
 

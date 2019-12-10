@@ -1,5 +1,7 @@
 <template>
-  <button class="card__button"><slot></slot></button>
+  <button class="card__button">
+    <slot></slot>
+  </button>
 </template>
 
 <style>

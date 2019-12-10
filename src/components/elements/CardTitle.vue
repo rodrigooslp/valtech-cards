@@ -1,5 +1,7 @@
 <template>
-  <h2 class="card__title"><slot></slot></h2>
+  <h2 class="card__title">
+    <slot></slot>
+  </h2>
 </template>
 
 <style>

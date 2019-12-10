@@ -1,9 +1,22 @@
 <template>
   <div class="card card--position-relative">
-    <card-background class="card__background--position-absolute" :background-modifier="item.modifier" />
+    <card-background
+      class="card__background--position-absolute"
+      :background-modifier="item.modifier"
+    />
 
-    <card-default-content v-if="isDefaultContent" :title="item.title" :text="item.description" />
-    <card-city-content v-else :title="item.title" :subtitle="item.subtitle" :text="item.description" />
+    <card-default-content
+      v-if="isDefaultContent"
+      :title="item.title"
+      :text="item.description"
+    />
+
+    <card-city-content
+      v-else
+      :title="item.title"
+      :subtitle="item.subtitle"
+      :text="item.description"
+    />
   </div>
 </template>
 

@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import Card from '@/components/items/Card'
+import Card from '@/components/widgets/Card'
 
 export default {
   components: { Card }
