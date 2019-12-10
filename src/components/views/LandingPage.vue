@@ -1,33 +1,33 @@
 <template>
-  <div class="container py-6 md:px-40 md:mx-auto">
-    <div class="flex flex-col">
+  <div class="landing-page container md:px-40 md:mx-auto">
+    <div class="landing-page__content">
 
       <div class="md:flex md:flex-row md:-mx-3">
-        <div class="py-3 px-6 item-header md:px-3 md:w-full">
+        <div class="landing-page__item md:px-3 md:w-full">
           <card content="default" />
         </div>
       </div>
 
       <div class="md:flex md:flex-row md:-mx-3">
-        <div class="py-3 px-6 item md:px-3 md:w-2/4">
+        <div class="landing-page__item md:px-3 md:w-2/4">
           <card content="venice" />
         </div>
-        <div class="py-3 px-6 item md:px-3 md:w-1/4">
+        <div class="landing-page__item md:px-3 md:w-1/4">
           <card content="berlin" />
         </div>
-        <div class="py-3 px-6 item md:px-3 md:w-1/4">
+        <div class="landing-page__item md:px-3 md:w-1/4">
           <card content="barcelona" />
         </div>
       </div>
 
       <div class="md:flex md:flex-row md:-mx-3">
-        <div class="py-3 px-6 item md:px-3 md:w-1/4">
+        <div class="landing-page__item md:px-3 md:w-1/4">
           <card content="paris" />
         </div>
-        <div class="py-3 px-6 item md:px-3 md:w-1/4">
+        <div class="landing-page__item md:px-3 md:w-1/4">
           <card content="amsterdam" />
         </div>
-        <div class="py-3 px-6 item md:px-3 md:w-2/4">
+        <div class="landing-page__item md:px-3 md:w-2/4">
           <card content="london" />
         </div>
       </div>
@@ -45,18 +45,17 @@ export default {
 </script>
 
 <style lang="scss">
-.item, .item-header {
-  height: 20rem;
-}
+.landing-page {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 
-@media (min-width: 768px) {
-  .item {
-    height: 24rem;
+  @at-root &__content {
+    display: flex;
+    flex-direction: column;
   }
 
-  .item-header {
-    height: 32rem;
+  @at-root &__item {
+    padding: 0.75rem 1.5rem;
   }
 }
-
 </style>
