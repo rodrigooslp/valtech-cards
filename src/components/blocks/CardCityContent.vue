@@ -88,7 +88,7 @@ export default {
 
 <style>
 .card__city-content {
-  height: 100%;
+  height: 20rem;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -98,5 +98,11 @@ export default {
 
 .card__city-content--position-relative {
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .card__city-content {
+    height: 24rem;
+  }
 }
 </style>

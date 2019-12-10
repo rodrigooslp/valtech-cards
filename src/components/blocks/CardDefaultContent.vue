@@ -33,16 +33,22 @@ export default {
 </script>
 
 <style>
-  .card__default-content {
-    height: 100%;
-    border-radius: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+.card__default-content {
+  height: 20rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  .card__default-content--position-relative {
-    position: relative;
+.card__default-content--position-relative {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .card__default-content {
+    height: 32rem;
   }
+}
 </style>
