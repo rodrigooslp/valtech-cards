@@ -4,31 +4,31 @@
 
       <div class="md:flex md:flex-row md:-mx-3">
         <div class="py-3 px-6 item-header md:px-3 md:w-full">
-          <info-card content="default"></info-card>
+          <card content="default" />>
         </div>
       </div>
 
       <div class="md:flex md:flex-row md:-mx-3">
         <div class="py-3 px-6 item md:px-3 md:w-2/4">
-          <info-card content="venice"></info-card>
+          <card content="venice" />
         </div>
         <div class="py-3 px-6 item md:px-3 md:w-1/4">
-          <info-card content="berlin"></info-card>
+          <card content="berlin" />
         </div>
         <div class="py-3 px-6 item md:px-3 md:w-1/4">
-          <info-card content="barcelona"></info-card>
+          <card content="barcelona" />
         </div>
       </div>
 
       <div class="md:flex md:flex-row md:-mx-3">
         <div class="py-3 px-6 item md:px-3 md:w-1/4">
-          <info-card content="paris"></info-card>
+          <card content="paris" />
         </div>
         <div class="py-3 px-6 item md:px-3 md:w-1/4">
-          <info-card content="amsterdam"></info-card>
+          <card content="amsterdam" />
         </div>
         <div class="py-3 px-6 item md:px-3 md:w-2/4">
-          <info-card content="london"></info-card>
+          <card content="london" />
         </div>
       </div>
 
@@ -37,10 +37,10 @@
 </template>
 
 <script>
-import InfoCard from '@/components/items/InfoCard'
+import Card from '@/components/items/Card'
 
 export default {
-  components: { InfoCard }
+  components: { Card }
 }
 </script>
 

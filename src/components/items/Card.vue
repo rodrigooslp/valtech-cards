@@ -2,15 +2,15 @@
   <div class="w-full h-full relative">
     <card-background class="bg-center bg-cover w-full h-full absolute rounded-lg" :bg-class="body.class"></card-background>
 
-    <card-content-default v-if="isContentDefault" :title="body.title" :text="body.description"></card-content-default>
-    <card-content-city v-else :title="body.title" :subtitle="body.subtitle" :text="body.description"></card-content-city>
+    <card-default-content v-if="isDefaultContent" :title="body.title" :text="body.description"></card-default-content>
+    <card-city-content v-else :title="body.title" :subtitle="body.subtitle" :text="body.description"></card-city-content>
   </div>
 </template>
 
 <script>
 import CardBackground from '@/components/elements/CardBackground'
-import CardContentDefault from '@/components/blocks/CardContentDefault'
-import CardContentCity from '@/components/blocks/CardContentCity'
+import CardDefaultContent from '@/components/blocks/CardDefaultContent'
+import CardCityContent from '@/components/blocks/CardCityContent'
 
 export default {
   props: {
@@ -21,11 +21,11 @@ export default {
   },
   components: {
     CardBackground,
-    CardContentDefault,
-    CardContentCity
+    CardDefaultContent,
+    CardCityContent
   },
   computed: {
-    isContentDefault () {
+    isDefaultContent () {
       return this.body === this.text.default
     },
 

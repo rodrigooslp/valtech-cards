@@ -5,5 +5,6 @@
 <style>
 .card__title {
   color: #ffffffbf;
+  margin-bottom: 0.5rem;
 }
 </style>

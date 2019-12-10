@@ -1,9 +1,9 @@
 <template>
-  <div class="card__content-default card__content-default--position-relative">
-    <card-overlay ref="card" class="card__overlay--position-absolute"></card-overlay>
+  <div class="card__default-content card__default-content--position-relative">
+    <card-overlay ref="card" class="card__overlay--position-absolute" />
 
     <card-title>{{ title }}</card-title>
-    <valtech-logo class="mt-3 mb-5"></valtech-logo>
+    <valtech-logo />
     <card-text>{{ text }}</card-text>
   </div>
 </template>
@@ -33,7 +33,7 @@ export default {
 </script>
 
 <style>
-  .card__content-default {
+  .card__default-content {
     height: 100%;
     border-radius: 0.5rem;
     display: flex;
@@ -42,7 +42,7 @@ export default {
     align-items: center;
   }
 
-  .card__content-default--position-relative {
+  .card__default-content--position-relative {
     position: relative;
   }
 </style>

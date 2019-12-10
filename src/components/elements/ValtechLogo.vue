@@ -5,5 +5,7 @@
 <style>
 .card__valtech-logo {
   height: 2rem;
+  margin-top: 0.25rem;
+  margin-bottom: 1.25rem;
 }
 </style>

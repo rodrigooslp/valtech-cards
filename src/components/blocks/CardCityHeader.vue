@@ -1,8 +1,8 @@
 <template>
-<div class="flex flex-col justify-center items-center">
-  <card-title class="mb-2">{{ title }}</card-title>
-  <card-subtitle>{{ subtitle }}</card-subtitle>
-</div>
+  <div class="card__city-header">
+    <card-title>{{ title }}</card-title>
+    <card-subtitle>{{ subtitle }}</card-subtitle>
+  </div>
 </template>
 
 <script>
@@ -24,3 +24,14 @@ export default {
   }
 }
 </script>
+
+<style>
+.card__city-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+</style>

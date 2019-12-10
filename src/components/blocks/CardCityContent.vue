@@ -1,8 +1,8 @@
 <template>
-  <div class="card__content-city card__content-city--position-relative" @mouseenter="showEnterAnimation" @mouseleave="showLeaveAnimation">
-    <card-overlay ref="card" class="card__overlay--position-absolute"></card-overlay>
+  <div class="card__city-content card__city-content--position-relative" @mouseenter="showEnterAnimation" @mouseleave="showLeaveAnimation">
+    <card-overlay ref="card" class="card__overlay--position-absolute" />
 
-    <card-header-city ref="header" class="mt-8 mb-2" :title="title" :subtitle="subtitle"></card-header-city>
+    <card-city-header ref="header" :title="title" :subtitle="subtitle" />
     <card-description ref="description" class="card__description--zero-height card__description--zero-opacity card__description--grow">{{ text }}</card-description>
 
     <card-button ref="button" class="card__button--invisible card__button--zero-opacity">Explore More</card-button>
@@ -15,7 +15,7 @@ import { gsap } from 'gsap'
 import CardOverlay from '@/components/elements/CardOverlay'
 import CardDescription from '@/components/elements/CardDescription'
 import CardButton from '@/components/elements/CardButton'
-import CardHeaderCity from '@/components/blocks/CardHeaderCity'
+import CardCityHeader from '@/components/blocks/CardCityHeader'
 
 export default {
   props: {
@@ -33,7 +33,7 @@ export default {
     CardOverlay,
     CardDescription,
     CardButton,
-    CardHeaderCity
+    CardCityHeader
   },
   mounted () {
     const { header, description, button, card } = this.$refs
@@ -66,7 +66,7 @@ export default {
 </script>
 
 <style>
-.card__content-city {
+.card__city-content {
   height: 100%;
   border-radius: 0.5rem;
   display: flex;
@@ -75,7 +75,7 @@ export default {
   align-items: center;
 }
 
-.card__content-city--position-relative {
+.card__city-content--position-relative {
   position: relative;
 }
 </style>
