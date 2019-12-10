@@ -4,7 +4,7 @@
 
       <div class="md:flex md:flex-row md:-mx-3">
         <div class="py-3 px-6 item-header md:px-3 md:w-full">
-          <card content="default" />>
+          <card content="default" />
         </div>
       </div>
 
