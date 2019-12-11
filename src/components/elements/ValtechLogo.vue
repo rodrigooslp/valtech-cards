@@ -1,7 +1,7 @@
 <template>
   <img
     class="card__valtech-logo"
-    src="/img/logo.svg"
+    src="img/logo.svg"
     alt="valtech_"
   >
 </template>
