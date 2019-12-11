@@ -35,6 +35,7 @@ export default {
 <style lang="scss">
 .card__default-content {
   height: 20rem;
+  max-height: 20rem;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -49,6 +50,7 @@ export default {
 @media (min-width: 768px) {
   .card__default-content {
     height: 32rem;
+    max-height: 32rem;
   }
 }
 </style>

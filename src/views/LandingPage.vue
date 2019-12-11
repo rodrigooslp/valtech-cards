@@ -4,7 +4,7 @@
 
       <div class="md:flex md:flex-row md:-mx-3">
         <div class="landing-page__item md:px-3 md:w-full">
-          <card content="default" />
+          <card content="default" class="card--large" />
         </div>
       </div>
 

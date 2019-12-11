@@ -97,10 +97,23 @@ export default {
 <style lang="scss">
 .card {
   width: 100%;
-  height: 100%;
+  height: 20rem;
+  max-height: 20rem;
 
   @at-root &--position-relative {
     position: relative;
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    height: 24rem;
+    max-height: 24rem;
+
+    @at-root &--large {
+      height: 32rem;
+      max-height: 32rem;
+    }
   }
 }
 </style>
