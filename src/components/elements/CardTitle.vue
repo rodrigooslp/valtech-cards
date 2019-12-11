@@ -11,5 +11,6 @@
   letter-spacing: 0.15rem;
   margin-bottom: 0.5rem;
   font-family: Helvetica, Arial, sans-serif;
+  font-weight: 400;
 }
 </style>

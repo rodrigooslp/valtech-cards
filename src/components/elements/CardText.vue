@@ -12,6 +12,7 @@
   padding-left: 2rem;
   padding-right: 2rem;
   font-family: Helvetica, Arial, sans-serif;
+  font-weight: 400;
 }
 
 @media (min-width: 768px) {
