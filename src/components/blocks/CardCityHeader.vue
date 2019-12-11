@@ -31,6 +31,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
