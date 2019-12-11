@@ -14,6 +14,8 @@
   margin-top: 0.75rem;
   margin-bottom: 1.5rem;
   font-family: Helvetica, Arial, sans-serif;
+  background-color: transparent;
+  cursor: pointer;
 
   @at-root &:focus {
     outline: none;
