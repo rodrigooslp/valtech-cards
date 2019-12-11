@@ -13,6 +13,7 @@
   padding: 0.35rem 1rem;
   margin-top: 0.75rem;
   margin-bottom: 1.5rem;
+  font-family: Helvetica, Arial, sans-serif;
 
   @at-root &:focus {
     outline: none;

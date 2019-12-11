@@ -11,6 +11,7 @@
   text-align: center;
   padding-left: 2rem;
   padding-right: 2rem;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 @media (min-width: 768px) {

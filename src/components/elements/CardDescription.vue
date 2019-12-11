@@ -12,6 +12,7 @@
   padding-left: 2rem;
   padding-right: 2rem;
   line-height: 1.2rem;
+  font-family: Helvetica, Arial, sans-serif;
 
   @at-root &--grow {
     flex-grow: 1;

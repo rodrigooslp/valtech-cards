@@ -9,5 +9,6 @@
   color: #fff;
   font-size: 1.6rem;
   font-weight: 600;
+  font-family: Helvetica, Arial, sans-serif;
 }
 </style>

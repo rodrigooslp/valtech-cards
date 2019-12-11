@@ -10,5 +10,6 @@
   font-size: 0.95rem;
   letter-spacing: 0.15rem;
   margin-bottom: 0.5rem;
+  font-family: Helvetica, Arial, sans-serif;
 }
 </style>
