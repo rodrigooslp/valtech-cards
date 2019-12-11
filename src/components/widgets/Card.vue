@@ -1,5 +1,5 @@
 <template>
-  <div class="card card--position-relative">
+  <div class="card">
     <card-background
       class="card__background--position-absolute"
       :background-modifier="item.modifier"
@@ -99,10 +99,7 @@ export default {
   width: 100%;
   height: 20rem;
   max-height: 20rem;
-
-  @at-root &--position-relative {
-    position: relative;
-  }
+  position: relative;
 }
 
 @media (min-width: 768px) {

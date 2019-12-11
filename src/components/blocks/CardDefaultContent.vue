@@ -1,5 +1,5 @@
 <template>
-  <div class="card__default-content card__default-content--position-relative">
+  <div class="card__default-content">
     <card-overlay class="card__overlay--color-light card__overlay--position-absolute" />
 
     <card-title>{{ title }}</card-title>
@@ -41,10 +41,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  @at-root &--position-relative {
-    position: relative;
-  }
+  position: relative;
 }
 
 @media (min-width: 768px) {

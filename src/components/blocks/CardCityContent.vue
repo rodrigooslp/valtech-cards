@@ -1,5 +1,5 @@
 <template>
-  <div class="card__city-content card__city-content--position-relative"
+  <div class="card__city-content"
     @mouseenter="showEnterAnimation"
     @mouseleave="showLeaveAnimation"
   >
@@ -95,10 +95,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  @at-root &--position-relative {
-    position: relative;
-  }
+  position: relative;
 }
 
 @media (min-width: 768px) {
