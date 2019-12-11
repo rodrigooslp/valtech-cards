@@ -25,10 +25,17 @@ $modifiers: 'venice', 'berlin', 'barcelona', 'paris', 'amsterdam', 'london';
   border-radius: 0.5rem;
   background-position: center;
   background-size: cover;
+  background-image: url('/img/bg-default.jpg');
   z-index: -2;
 
   @at-root &--position-absolute {
     position: absolute;
+  }
+
+  @each $modifier in $modifiers {
+    @at-root &--#{$modifier} {
+      background-image: url('/img/bg-#{$modifier}.jpg');
+    }
   }
 }
 
@@ -40,18 +47,6 @@ $modifiers: 'venice', 'berlin', 'barcelona', 'paris', 'amsterdam', 'london';
   @each $modifier in $modifiers {
     .card__background--#{$modifier} {
       background-image: url('/img/bg-#{$modifier}.webp');
-    }
-  }
-}
-
-.no-webp {
-  .card__background {
-    background-image: url('/img/bg-default.jpg');
-  }
-
-  @each $modifier in $modifiers {
-    .card__background--#{$modifier} {
-      background-image: url('/img/bg-#{$modifier}.jpg');
     }
   }
 }
