@@ -34,24 +34,24 @@ $modifiers: 'venice', 'berlin', 'barcelona', 'paris', 'amsterdam', 'london';
 
 .webp {
   .card__background {
-    background-image: url('../../assets/img/bg-default.webp');
+    background-image: url('/img/bg-default.webp');
   }
 
   @each $modifier in $modifiers {
     .card__background--#{$modifier} {
-      background-image: url('../../assets/img/bg-#{$modifier}.webp');
+      background-image: url('/img/bg-#{$modifier}.webp');
     }
   }
 }
 
 .no-webp {
   .card__background {
-    background-image: url('../../assets/img/bg-default.jpg');
+    background-image: url('/img/bg-default.jpg');
   }
 
   @each $modifier in $modifiers {
     .card__background--#{$modifier} {
-      background-image: url('../../assets/img/bg-#{$modifier}.jpg');
+      background-image: url('/img/bg-#{$modifier}.jpg');
     }
   }
 }
