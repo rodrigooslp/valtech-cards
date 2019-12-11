@@ -25,15 +25,18 @@ $modifiers: 'venice', 'berlin', 'barcelona', 'paris', 'amsterdam', 'london';
   border-radius: 0.5rem;
   background-position: center;
   background-size: cover;
-  background-image: url('/img/bg-default.jpg');
   z-index: -2;
 
   @at-root &--position-absolute {
     position: absolute;
   }
 
+  @at-root &:not(html.webp) {
+    background-image: url('/img/bg-default.jpg');
+  }
+
   @each $modifier in $modifiers {
-    @at-root &--#{$modifier} {
+    @at-root &--#{$modifier}:not(html.webp) {
       background-image: url('/img/bg-#{$modifier}.jpg');
     }
   }
