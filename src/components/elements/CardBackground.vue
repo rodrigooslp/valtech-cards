@@ -1,16 +1,27 @@
 <template>
-  <div class="card__background" :class="backgroundClass"></div>
+  <picture class="card__background">
+    <source :srcset="imageSourceWebp" type="image/webp">
+    <source :srcset="imageSourceJpg" type="image/jpeg">
+    <img class="card__background" :src="imageSourceJpg" :alt="image">
+  </picture>
 </template>
 
 <script>
 export default {
   props: {
-    backgroundModifier: String
+    image: String
   },
   computed: {
-    backgroundClass () {
-      if (!this.backgroundModifier) return
-      return `card__background--${this.backgroundModifier}`
+    imageSourceWebp () {
+      let file = 'default'
+      if (this.image) file = this.image
+      return `img/bg-${file}.webp`
+    },
+
+    imageSourceJpg () {
+      let file = 'default'
+      if (this.image) file = this.image
+      return `img/bg-${file}.jpg`
     }
   }
 }
@@ -23,34 +34,11 @@ $modifiers: 'venice', 'berlin', 'barcelona', 'paris', 'amsterdam', 'london';
   width: 100%;
   height: 100%;
   border-radius: 0.5rem;
-  background-position: center;
-  background-size: cover;
   z-index: -2;
+  object-fit: cover;
 
   @at-root &--position-absolute {
     position: absolute;
-  }
-
-  @at-root &:not(html.webp) {
-    background-image: url('/img/bg-default.jpg');
-  }
-
-  @each $modifier in $modifiers {
-    @at-root &--#{$modifier}:not(html.webp) {
-      background-image: url('/img/bg-#{$modifier}.jpg');
-    }
-  }
-}
-
-.webp {
-  .card__background {
-    background-image: url('/img/bg-default.webp');
-  }
-
-  @each $modifier in $modifiers {
-    .card__background--#{$modifier} {
-      background-image: url('/img/bg-#{$modifier}.webp');
-    }
   }
 }
 
