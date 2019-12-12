@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/css/card-background.css">
+<style>
+    #app { display: flex; height: 100%; flex-wrap: wrap; justify-content: center; }
+    #app div { padding: 0.5rem; width: 100%; }
+    @media (min-width: 768px) { #app div { padding: 0.5rem; width: 40%; } }
+</style>
+
+<div id="app">
+    {{#each images}}
+        <div>
+            <card-background image="{{this}}"></card-background>
+        </div>
+    {{/each}}
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script src="/js/card-background.js"></script>
+
+<script defer>
+    new Vue({
+        components: {
+            CardBackground: CardBackground
+        }
+    }).$mount('#app')
+</script>

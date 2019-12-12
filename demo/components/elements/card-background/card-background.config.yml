@@ -1,0 +1,10 @@
+title: card-background
+context:
+    images:
+        - default
+        - venice
+        - berlin
+        - barcelona
+        - paris
+        - amsterdam
+        - london
