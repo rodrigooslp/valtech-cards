@@ -1,7 +1,17 @@
 <link rel="stylesheet" href="/css/card-overlay.css">
+<style>
+    #app { display: flex; height: 75%; flex-wrap: wrap; justify-content: center; }
+    #app > div { padding: 0.5rem; width: 100%; }
+    @media (min-width: 768px) { #app > div { padding: 0.5rem; width: 40%; } }
+</style>
 
 <div id="app">
-    <card-overlay></card-overlay>
+    <div>
+        <card-overlay></card-overlay>
+    </div>
+    <div>
+        <card-overlay class="card__overlay--color-light"></card-overlay>
+    </div>
 </div>
 
 <script src="https://unpkg.com/vue"></script>
