@@ -28,7 +28,6 @@ export default {
 </script>
 
 <style lang="scss">
-$modifiers: 'venice', 'berlin', 'barcelona', 'paris', 'amsterdam', 'london';
 
 .card__background {
   width: 100%;
