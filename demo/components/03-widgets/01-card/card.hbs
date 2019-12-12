@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/css/card.css">
+<style>
+    #app { display: flex; height: 100%; flex-wrap: wrap; justify-content: center; }
+    #app > div { width: 90%; padding-top: 0.5rem; padding-right: 0.5rem; padding-bottom: 0.5rem; padding-left: 0; }
+    @media (min-width: 768px) {
+        #app > #header { width: 60%; }
+        #app > #item { width: 40%; }
+        #app > div { padding-left: 0.5rem; }
+    }
+</style>
+
+<div id="app">
+    <div id="header">
+        <card content="default" class="card--large"></card>
+    </div>
+    {{#each contents}}
+        <div id="item">
+            <card content="{{this}}"></card>
+        </div>
+    {{/each}}
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script src="/js/card.js"></script>
+
+<script defer>
+    new Vue({
+        components: {
+            Card: Card
+        }
+    }).$mount('#app')
+</script>
