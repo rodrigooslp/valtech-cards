@@ -12,5 +12,6 @@
   margin-bottom: 0.5rem;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 400;
+  text-align: center;
 }
 </style>
