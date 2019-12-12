@@ -5,11 +5,10 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "test:e2e": "vue-cli-service test:e2e",
     "build:demo": "node build/run.js",
-    "fractal:start": "fractal start --sync",
-    "lib": "vue-cli-service build --target lib --name CardTitle ./src/components/elements/CardTitle.vue"
+    "build:fractal": "node fractal-build",
+    "serve:fractal": "node fractal-server",
+    "test:e2e": "vue-cli-service test:e2e"
   },
   "dependencies": {
     "core-js": "^3.4.3",
