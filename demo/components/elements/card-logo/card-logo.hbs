@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/css/demo.css">
+<link rel="stylesheet" href="/css/card-logo.css">
+
+<div id="app">
+    <card-logo />
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script src="/js/card-logo.js"></script>
+
+<script defer>
+    new Vue({
+        components: {
+            CardLogo: CardLogo
+        }
+    }).$mount('#app')
+</script>
