@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/css/card-city-header.css">
+<style> #app { background-color: grey; } </style>
+
+<div id="app">
+    <card-city-header title="{{title}}" subtitle="{{subtitle}}" />
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script src="/js/card-city-header.js"></script>
+
+<script defer>
+    new Vue({
+        components: {
+            CardCityHeader: CardCityHeader
+        }
+    }).$mount('#app')
+</script>
