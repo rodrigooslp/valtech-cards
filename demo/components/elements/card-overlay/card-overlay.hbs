@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="/css/card-overlay.css">
+
+<div id="app">
+    <card-overlay></card-overlay>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script src="/js/card-overlay.js"></script>
+
+<script defer>
+    new Vue({
+        components: {
+            CardOverlay: CardOverlay
+        }
+    }).$mount('#app')
+</script>
