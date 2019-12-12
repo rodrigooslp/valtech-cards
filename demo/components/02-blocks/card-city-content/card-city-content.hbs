@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/css/card-city-content.css">
+<style>
+    #app { display: flex; height: 75%; flex-wrap: wrap; justify-content: center; }
+    #app > div { padding-top: 0.5rem; padding-right: 0.5rem; padding-bottom: 0.5rem; padding-left: 0; width: 90%; }
+    @media (min-width: 768px) { #app > div { padding: 0.5rem; width: 40%; padding-left: 0.5rem; } }
+</style>
+
+<div id="app">
+    {{#each cities}}
+        <div>
+            <card-city-content title="{{this.title}}" subtitle="{{this.subtitle}}" text="{{this.text}}"/>
+        </div>
+    {{/each}}
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script src="/js/card-city-content.js"></script>
+
+<script defer>
+    new Vue({
+        components: {
+            CardCityContent: CardCityContent
+        }
+    }).$mount('#app')
+</script>
