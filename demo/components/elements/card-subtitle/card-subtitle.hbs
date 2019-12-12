@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/css/demo.css">
+<link rel="stylesheet" href="/css/card-subtitle.css">
+
+<div id="app">
+    <card-subtitle>{{text}}</card-subtitle>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script src="/js/card-subtitle.js"></script>
+
+<script defer>
+    new Vue({
+        components: {
+            CardSubtitle: CardSubtitle
+        }
+    }).$mount('#app')
+</script>
