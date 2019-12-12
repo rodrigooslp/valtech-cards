@@ -1,15 +1,17 @@
+<link rel="stylesheet" href="/css/demo.css">
 <link rel="stylesheet" href="/css/card-title.css">
+
+<div id="app">
+    <card-title>FRONT-END</card-title>
+</div>
+
 <script src="https://unpkg.com/vue"></script>
 <script src="/js/card-title.js"></script>
 
-<div id="app" style="background:grey;">
-  <card-title>FRONT-END</card-title>
-</div>
-
 <script defer>
-  new Vue({
-    components: {
-      CardTitle: CardTitle
-    }
-  }).$mount('#app')
+    new Vue({
+        components: {
+            CardTitle: CardTitle
+        }
+    }).$mount('#app')
 </script>
