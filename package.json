@@ -7,8 +7,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
-    "lib": "vue-cli-service build --target lib --no-clean --name Card ./src/components/widgets/Card.vue",
-    "wc": "vue-cli-service build --target wc outputDir --name valtech-card ./src/views/LandingPage.vue"
+    "build:demo": "node build/run.js"
   },
   "dependencies": {
     "core-js": "^3.4.3",
