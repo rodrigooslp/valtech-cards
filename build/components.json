@@ -1,0 +1,13 @@
+[
+    { "path": "./src/components/elements/CardTitle.vue", "name": "CardTitle" },
+    { "path": "./src/components/elements/CardText.vue", "name": "CardText" },
+    { "path": "./src/components/elements/CardSubtitle.vue", "name": "CardSubtitle" },
+    { "path": "./src/components/elements/CardOverlay.vue", "name": "CardOverlay" },
+    { "path": "./src/components/elements/CardDescription.vue", "name": "CardDescription" },
+    { "path": "./src/components/elements/CardButton.vue", "name": "CardButton" },
+    { "path": "./src/components/elements/CardBackground.vue", "name": "CardBackground" },
+    { "path": "./src/components/blocks/CardDefaultContent.vue", "name": "CardDefaultContent" },
+    { "path": "./src/components/blocks/CardCityHeader.vue", "name": "CardCityHeader" },
+    { "path": "./src/components/blocks/CardCityContent.vue", "name": "CardCityContent" },
+    { "path": "./src/components/widgets/Card.vue", "name": "Card" }
+]

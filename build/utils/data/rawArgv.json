@@ -1,0 +1,9 @@
+[
+    "build",
+    "--target",
+    "lib",
+    "--no-clean",
+    "--name",
+    "Card",
+    "./src/components/widgets/Card.vue"
+]

@@ -7,8 +7,8 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
-    "title": "vue-cli-service build --target lib --name ValtechLogo ./src/components/elements/ValtechLogo.vue",
-    "wc": "vue-cli-service build --target wc --name card-button ./src/components/elements/CardButton.vue"
+    "lib": "vue-cli-service build --target lib --no-clean --name Card ./src/components/widgets/Card.vue",
+    "wc": "vue-cli-service build --target wc outputDir --name valtech-card ./src/views/LandingPage.vue"
   },
   "dependencies": {
     "core-js": "^3.4.3",
@@ -25,6 +25,7 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "rimraf": "^3.0.0",
     "sass": "^1.23.7",
     "sass-loader": "^8.0.0",
     "tailwindcss": "^1.1.4",

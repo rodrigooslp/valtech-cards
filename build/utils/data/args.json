@@ -1,0 +1,17 @@
+{
+    "_": [
+        "build"
+    ],
+    "modern": false,
+    "report": false,
+    "report-json": false,
+    "inline-vue": false,
+    "watch": false,
+    "open": false,
+    "copy": false,
+    "https": false,
+    "verbose": false,
+    "target": "lib",
+    "clean": false,
+    "name": null
+}
