@@ -1,17 +1,17 @@
-<link rel="stylesheet" href="/css/card-subtitle.css">
+<link rel="stylesheet" href="/css/card-text.css">
 <style> #app { background-color: grey; } </style>
 
 <div id="app">
-    <card-subtitle>{{text}}</card-subtitle>
+    <card-text>{{text}}</card-text>
 </div>
 
 <script src="https://unpkg.com/vue"></script>
-<script src="/js/card-subtitle.js"></script>
+<script src="/js/card-text.js"></script>
 
 <script defer>
     new Vue({
         components: {
-            CardSubtitle: CardSubtitle
+            CardText: CardText
         }
     }).$mount('#app')
 </script>
