@@ -1,7 +1,7 @@
 <template>
   <img
     class="card__card-logo"
-    src="img/logo.svg"
+    src="/img/logo.svg"
     alt="card_"
   >
 </template>

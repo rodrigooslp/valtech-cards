@@ -15,13 +15,13 @@ export default {
     imageSourceWebp () {
       let file = 'default'
       if (this.image) file = this.image
-      return `img/bg-${file}.webp`
+      return `/img/bg-${file}.webp`
     },
 
     imageSourceJpg () {
       let file = 'default'
       if (this.image) file = this.image
-      return `img/bg-${file}.jpg`
+      return `/img/bg-${file}.jpg`
     }
   }
 }
