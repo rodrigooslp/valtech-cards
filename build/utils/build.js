@@ -2,8 +2,8 @@ const { error } = require('@vue/cli-shared-utils')
 const Service = require('@vue/cli-service')
 const BuildHelper = require('./BuildHelper')
 
-function build (name, path) {
-  const helper = new BuildHelper(name, path)
+function build (name, level, path) {
+  const helper = new BuildHelper(name, level, path)
   const service = new Service(process.cwd())
 
   return service.run('build', helper.args, helper.rawArgv)
@@ -15,6 +15,6 @@ function build (name, path) {
 }
 
 const args = process.argv.slice(2)
-const [ name, path ] = args
+const [ name, level, path ] = args
 
-build(name, path)
+build(name, level, path)

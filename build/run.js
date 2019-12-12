@@ -3,8 +3,8 @@ const { spawn } = require('child_process')
 const components = require('./components.json')
 const children = []
 
-components.forEach(({ name, path }) => {
-  const child = spawn('node', ['./build/utils/build', name, path])
+components.forEach(({ name, level, path }) => {
+  const child = spawn('node', ['./build/utils/build', name, level, path])
 
   child.stderr.setEncoding('utf8')
 

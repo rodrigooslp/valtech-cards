@@ -1,8 +1,9 @@
 const fs = require('fs')
 
 class BuildHelper {
-  constructor (name, path) {
+  constructor (name, level, path) {
     this.name = name
+    this.level = level
     this.path = path
 
     this.args = this.createArgs()
@@ -24,26 +25,25 @@ class BuildHelper {
   }
 
   moveFiles () {
-    const root = './demo'
     const js = `./dist/${this.name}.umd.js`
     const css = `./dist/${this.name}.css`
 
-    if (!fs.existsSync(root)) {
-      fs.mkdirSync(root)
-    }
+    let dir = './demo'
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir)
 
-    if (!fs.existsSync(`${root}/${this.name}`)) {
-      fs.mkdirSync(`${root}/${this.name}`)
-    }
+    dir += `/${this.level}`
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir)
 
-    if (!fs.existsSync(`${root}/${this.name}/component`)) {
-      fs.mkdirSync(`${root}/${this.name}/component`)
-    }
+    dir += `/${this.name}`
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir)
 
-    fs.copyFileSync(js, `./demo/${this.name}/component/${this.name}.js`)
+    dir += '/component'
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir)
+
+    fs.copyFileSync(js, `${dir}/${this.name}.js`)
 
     if (fs.existsSync(css)) {
-      fs.copyFileSync(css, `./demo/${this.name}/component/${this.name}.css`)
+      fs.copyFileSync(css, `${dir}/${this.name}.css`)
     }
   }
 }
