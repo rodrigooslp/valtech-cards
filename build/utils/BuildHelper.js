@@ -1,4 +1,5 @@
 const fs = require('fs')
+const { kebabCase } = require('lodash')
 
 class BuildHelper {
   constructor (name, level, path) {
@@ -25,6 +26,8 @@ class BuildHelper {
   }
 
   moveFiles () {
+    const title = kebabCase(this.name)
+
     const js = `./dist/${this.name}.umd.js`
     const css = `./dist/${this.name}.css`
 
@@ -34,16 +37,16 @@ class BuildHelper {
     dir += `/${this.level}`
     if (!fs.existsSync(dir)) fs.mkdirSync(dir)
 
-    dir += `/${this.name}`
+    dir += `/${title}`
     if (!fs.existsSync(dir)) fs.mkdirSync(dir)
 
     dir += '/component'
     if (!fs.existsSync(dir)) fs.mkdirSync(dir)
 
-    fs.copyFileSync(js, `${dir}/${this.name}.js`)
+    fs.copyFileSync(js, `${dir}/${title}.js`)
 
     if (fs.existsSync(css)) {
-      fs.copyFileSync(css, `${dir}/${this.name}.css`)
+      fs.copyFileSync(css, `${dir}/${title}.css`)
     }
   }
 }
