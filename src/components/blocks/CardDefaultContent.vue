@@ -3,7 +3,7 @@
     <card-overlay class="card__overlay--color-light card__overlay--position-absolute" />
 
     <card-title>{{ title }}</card-title>
-    <valtech-logo />
+    <card-logo />
     <card-text>{{ text }}</card-text>
   </div>
 </template>
@@ -12,7 +12,7 @@
 import CardOverlay from '@/components/elements/CardOverlay'
 import CardTitle from '@/components/elements/CardTitle'
 import CardText from '@/components/elements/CardText'
-import ValtechLogo from '@/components/elements/ValtechLogo'
+import CardLogo from '@/components/elements/CardLogo'
 
 export default {
   props: {
@@ -27,7 +27,7 @@ export default {
     CardOverlay,
     CardTitle,
     CardText,
-    ValtechLogo
+    CardLogo
   }
 }
 </script>

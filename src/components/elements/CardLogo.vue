@@ -1,13 +1,13 @@
 <template>
   <img
-    class="card__valtech-logo"
+    class="card__card-logo"
     src="img/logo.svg"
-    alt="valtech_"
+    alt="card_"
   >
 </template>
 
 <style>
-.card__valtech-logo {
+.card__card-logo {
   height: 2rem;
   margin-top: 0.25rem;
   margin-bottom: 1.25rem;
