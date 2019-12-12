@@ -1,14 +1,14 @@
 [
-    { "path": "./src/components/elements/CardTitle.vue", "level": "elements", "name": "CardTitle" },
-    { "path": "./src/components/elements/CardText.vue", "level": "elements", "name": "CardText" },
-    { "path": "./src/components/elements/CardSubtitle.vue", "level": "elements", "name": "CardSubtitle" },
-    { "path": "./src/components/elements/CardOverlay.vue", "level": "elements", "name": "CardOverlay" },
-    { "path": "./src/components/elements/CardLogo.vue", "level": "elements", "name": "CardLogo" },
-    { "path": "./src/components/elements/CardDescription.vue", "level": "elements", "name": "CardDescription" },
-    { "path": "./src/components/elements/CardButton.vue", "level": "elements", "name": "CardButton" },
-    { "path": "./src/components/elements/CardBackground.vue", "level": "elements", "name": "CardBackground" },
-    { "path": "./src/components/blocks/CardDefaultContent.vue", "level": "blocks", "name": "CardDefaultContent" },
-    { "path": "./src/components/blocks/CardCityHeader.vue", "level": "blocks", "name": "CardCityHeader" },
-    { "path": "./src/components/blocks/CardCityContent.vue", "level": "blocks", "name": "CardCityContent" },
-    { "path": "./src/components/widgets/Card.vue", "level": "widgets", "name": "Card" }
+    { "path": "./src/components/elements/CardTitle.vue", "name": "CardTitle" },
+    { "path": "./src/components/elements/CardText.vue", "name": "CardText" },
+    { "path": "./src/components/elements/CardSubtitle.vue", "name": "CardSubtitle" },
+    { "path": "./src/components/elements/CardOverlay.vue", "name": "CardOverlay" },
+    { "path": "./src/components/elements/CardLogo.vue", "name": "CardLogo" },
+    { "path": "./src/components/elements/CardDescription.vue", "name": "CardDescription" },
+    { "path": "./src/components/elements/CardButton.vue", "name": "CardButton" },
+    { "path": "./src/components/elements/CardBackground.vue", "name": "CardBackground" },
+    { "path": "./src/components/blocks/CardDefaultContent.vue", "name": "CardDefaultContent" },
+    { "path": "./src/components/blocks/CardCityHeader.vue", "name": "CardCityHeader" },
+    { "path": "./src/components/blocks/CardCityContent.vue", "name": "CardCityContent" },
+    { "path": "./src/components/widgets/Card.vue", "name": "Card" }
 ]

@@ -2,9 +2,8 @@ const fs = require('fs')
 const { kebabCase } = require('lodash')
 
 class BuildHelper {
-  constructor (name, level, path) {
+  constructor (name, path) {
     this.name = name
-    this.level = level
     this.path = path
 
     this.args = this.createArgs()
@@ -28,25 +27,25 @@ class BuildHelper {
   moveFiles () {
     const title = kebabCase(this.name)
 
-    const js = `./dist/${this.name}.umd.js`
-    const css = `./dist/${this.name}.css`
+    const jsSource = `./dist/${this.name}.umd.js`
+    const cssSource = `./dist/${this.name}.css`
 
     let dir = './demo'
     if (!fs.existsSync(dir)) fs.mkdirSync(dir)
 
-    dir += `/${this.level}`
+    dir += '/public'
     if (!fs.existsSync(dir)) fs.mkdirSync(dir)
 
-    dir += `/${title}`
-    if (!fs.existsSync(dir)) fs.mkdirSync(dir)
+    const cssPath = `${dir}/css`
+    const jsPath = `${dir}/js`
 
-    dir += '/component'
-    if (!fs.existsSync(dir)) fs.mkdirSync(dir)
+    if (!fs.existsSync(cssPath)) fs.mkdirSync(cssPath)
+    if (!fs.existsSync(jsPath)) fs.mkdirSync(jsPath)
 
-    fs.copyFileSync(js, `${dir}/${title}.js`)
+    fs.copyFileSync(jsSource, `${jsPath}/${title}.js`)
 
-    if (fs.existsSync(css)) {
-      fs.copyFileSync(css, `${dir}/${title}.css`)
+    if (fs.existsSync(cssSource)) {
+      fs.copyFileSync(cssSource, `${cssPath}/${title}.css`)
     }
   }
 }
