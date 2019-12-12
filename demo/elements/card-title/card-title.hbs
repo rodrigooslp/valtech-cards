@@ -1,0 +1,16 @@
+<script src="https://unpkg.com/vue"></script>
+<script src="/CardTitle.umd.js"></script>
+<link rel="stylesheet" href="/CardTitle.css">
+
+
+<div id="app" style="background:grey;">
+  <card-title>FRONT-END</card-title>
+</div>
+
+<script defer>
+  new Vue({
+    components: {
+      CardTitle: CardTitle
+    }
+  }).$mount('#app')
+</script>
