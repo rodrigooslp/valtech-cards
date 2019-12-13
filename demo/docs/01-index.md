@@ -1,5 +1,5 @@
 ---
-title: valtech-cards
+title: docs
 ---
 
 Welcome to the `valtech-cards` docs.
