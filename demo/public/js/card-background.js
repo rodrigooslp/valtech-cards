@@ -180,12 +180,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7d17923e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/elements/CardBackground.vue?vue&type=template&id=649b888e&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7d17923e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/elements/CardBackground.vue?vue&type=template&id=613111f8&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('picture',{staticClass:"card__background"},[_c('source',{attrs:{"srcset":_vm.imageSourceWebp,"type":"image/webp"}}),_c('source',{attrs:{"srcset":_vm.imageSourceJpg,"type":"image/jpeg"}}),_c('img',{staticClass:"card__background",attrs:{"src":_vm.imageSourceJpg,"alt":_vm.image}})])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/elements/CardBackground.vue?vue&type=template&id=649b888e&
+// CONCATENATED MODULE: ./src/components/elements/CardBackground.vue?vue&type=template&id=613111f8&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/elements/CardBackground.vue?vue&type=script&lang=js&
 //
