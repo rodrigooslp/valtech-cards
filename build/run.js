@@ -13,20 +13,20 @@ components.forEach(({ name, path }) => {
   })
 
   child.on('close', (code) => {
-    console.log(`child process exited with code ${code}`)
+    console.log(`-  Build finished ${code === 0 ? 'successfully.' : 'with errors.'}\n`)
   })
 
-  console.log('child process started')
+  console.log('-  Starting build task...\n')
   children.push(child)
 })
 
 process.on('SIGINT', () => process.exit())
 
 process.on('exit', () => {
-  console.log('finishing', children.length, 'child processes...')
+  console.log('-  Finishing', children.length, 'processes...')
   children.forEach(c => c.kill())
-  console.log('done!\n')
-  console.log('cleaning up the dist folder...')
+  console.log('-  Done!\n')
+  console.log('-  Cleaning up the dist folder...')
   rimraf.sync('dist')
-  console.log('done!\n')
+  console.log('-  Done!\n')
 })
