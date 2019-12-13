@@ -1,9 +1,6 @@
 <template>
   <div class="card">
-    <card-background
-      class="card__background--position-absolute"
-      :image="item.image"
-    />
+    <card-background :image="item.image" />
 
     <card-default-content
       v-if="isDefaultContent"

@@ -12,10 +12,7 @@ $overlay-color-light: rgba(113, 113, 113, 0.3);
   border-radius: 0.5rem;
   background-image: linear-gradient($overlay-color, $overlay-color);
   z-index: -1;
-
-  @at-root &--position-absolute {
-    position: absolute;
-  }
+  position: absolute;
 
   @at-root &--color-light {
     background-image: linear-gradient($overlay-color-light, $overlay-color-light);

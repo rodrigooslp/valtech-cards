@@ -35,10 +35,7 @@ export default {
   border-radius: 0.5rem;
   z-index: -2;
   object-fit: cover;
-
-  @at-root &--position-absolute {
-    position: absolute;
-  }
+  position: absolute;
 }
 
 </style>

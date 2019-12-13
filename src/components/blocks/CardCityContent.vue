@@ -3,10 +3,7 @@
     @mouseenter="showEnterAnimation"
     @mouseleave="showLeaveAnimation"
   >
-    <card-overlay
-      ref="card"
-      class="card__overlay--position-absolute"
-    />
+    <card-overlay ref="card" />
 
     <card-city-header
       ref="header"
