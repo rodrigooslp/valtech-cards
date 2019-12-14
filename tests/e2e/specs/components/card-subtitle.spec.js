@@ -1,23 +1,23 @@
-import CardTitle from '@/components/elements/CardTitle.vue'
+import CardSubtitle from '@/components/elements/CardSubtitle.vue'
 const mountVue = require('cypress-vue-unit-test')
 
-describe('CardTitle', () => {
+describe('CardSubtitle', () => {
   const template = `
     <div id="app">
-      <card-title>{{ text }}</card-title>
+      <card-subtitle>{{ text }}</card-subtitle>
     </div>
   `
-  const components = { CardTitle }
+  const components = { CardSubtitle }
   const data = { text: null }
 
   beforeEach(mountVue({ template, data, components }))
 
   it('the passed text value should be inside the component', () => {
-    const text = 'VENICE'
+    const text = 'ITALY'
     Cypress.vue.text = text
 
     cy
-      .get('h2')
+      .get('h1')
       .should('be.visible')
       .invoke('text')
       .should('eq', text)
@@ -28,7 +28,7 @@ describe('CardTitle', () => {
     Cypress.vue.text = text
 
     cy
-      .get('h2')
+      .get('h1')
       .should('not.be.visible')
   })
 })

@@ -1,23 +1,27 @@
-import CardTitle from '@/components/elements/CardTitle.vue'
+import CardDescription from '@/components/elements/CardDescription.vue'
 const mountVue = require('cypress-vue-unit-test')
 
-describe('CardTitle', () => {
+describe('CardDescription', () => {
   const template = `
     <div id="app">
-      <card-title>{{ text }}</card-title>
+      <card-description>{{ text }}</card-description>
     </div>
   `
-  const components = { CardTitle }
+  const components = { CardDescription }
   const data = { text: null }
 
   beforeEach(mountVue({ template, data, components }))
 
   it('the passed text value should be inside the component', () => {
-    const text = 'VENICE'
+    const text = `
+      Venice, the capital of northern Italy's Veneto region,
+      is built on more than 100 small islands in a lagoon in the Adriatic Sea.
+      It has no roads, just canals.
+    `
     Cypress.vue.text = text
 
     cy
-      .get('h2')
+      .get('h4')
       .should('be.visible')
       .invoke('text')
       .should('eq', text)
@@ -28,7 +32,7 @@ describe('CardTitle', () => {
     Cypress.vue.text = text
 
     cy
-      .get('h2')
+      .get('h4')
       .should('not.be.visible')
   })
 })
