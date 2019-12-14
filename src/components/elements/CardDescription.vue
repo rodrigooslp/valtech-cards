@@ -28,7 +28,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 850px) {
   .card__description {
     padding-left: 2.5rem;
     padding-right: 2.5rem;

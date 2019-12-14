@@ -99,7 +99,7 @@ export default {
   position: relative;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 850px) {
   .card {
     height: 24rem;
     max-height: 24rem;

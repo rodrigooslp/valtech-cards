@@ -15,7 +15,7 @@
   font-weight: 400;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 850px) {
   .card__text {
     padding-left: 14rem;
     padding-right: 14rem;

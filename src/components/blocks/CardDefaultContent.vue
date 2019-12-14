@@ -44,7 +44,7 @@ export default {
   position: relative;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 850px) {
   .card__default-content {
     height: 32rem;
     max-height: 32rem;
