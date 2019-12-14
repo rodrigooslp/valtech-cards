@@ -1,5 +1,5 @@
 describe('Viewport', () => {
-  it('Visualize the app in multiple viewports', () => {
+  it('load the app in multiple viewports', () => {
     cy.visit('/')
     cy.wait(500)
     cy.viewport(360, 640)
