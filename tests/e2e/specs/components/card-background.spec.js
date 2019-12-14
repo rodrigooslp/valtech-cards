@@ -75,28 +75,34 @@ describe('CardBackground', () => {
       .should('include', 'london')
   })
 
-  it('any empty or invalid value should fallback to default', () => {
+  it('null image value should fallback to default', () => {
     Cypress.vue.image = null
 
     cy
       .get('img')
       .invoke('attr', 'src')
       .should('include', 'default')
+  })
 
+  it('undefined image value should fallback to default', () => {
     Cypress.vue.image = undefined
 
     cy
       .get('img')
       .invoke('attr', 'src')
       .should('include', 'default')
+  })
 
+  it('empty image value should fallback to default', () => {
     Cypress.vue.image = ''
 
     cy
       .get('img')
       .invoke('attr', 'src')
       .should('include', 'default')
+  })
 
+  it('invalid image value should fallback to default', () => {
     Cypress.vue.image = 'somewhere'
 
     cy
