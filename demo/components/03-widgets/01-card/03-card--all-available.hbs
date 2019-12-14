@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/card.css">
+<link rel="stylesheet" href="{{ path '/css/card.css' }}">
 <style>
     #app { display: flex; height: 100%; flex-wrap: wrap; justify-content: center; }
     #app > div { width: 90%; margin: 0.5rem 0.5rem 0.5rem 0; }
@@ -21,7 +21,7 @@
 </div>
 
 <script src="https://unpkg.com/vue"></script>
-<script src="/js/card.js"></script>
+<script src="{{ path '/js/card.js' }}"></script>
 
 <script defer>
     new Vue({
