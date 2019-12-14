@@ -1,14 +1,16 @@
 <link rel="stylesheet" href="/css/card-background.css">
 <style>
-    #app { display: flex; height: 90%; justify-content: center; }
+    #app { display: flex; height: 90%; flex-wrap: wrap; justify-content: center; }
     #app > div { position: relative; height: 40%; width: 80%; margin: 0.5rem 0.5rem 0.5rem 0; }
     @media (min-width: 768px) { #app > div { height: 90%; width: 30%; margin-left: 0.5rem; } }
 </style>
 
 <div id="app">
-    <div>
-        <card-background image="{{image}}"></card-background>
-    </div>
+    {{#each images}}
+        <div>
+            <card-background image="{{this}}"></card-background>
+        </div>
+    {{/each}}
 </div>
 
 <script src="https://unpkg.com/vue"></script>

@@ -1,10 +1,40 @@
 title: card-background
-context:
-    images:
-        - default
-        - venice
-        - berlin
-        - barcelona
-        - paris
-        - amsterdam
-        - london
+variants:
+    - name: default
+      context:
+        image: 'default'
+
+    - name: venice
+      context:
+        image: 'venice'
+
+    - name: berlin
+      context:
+        image: 'berlin'
+
+    - name: barcelona
+      context:
+        image: 'barcelona'
+
+    - name: paris
+      context:
+        image: 'paris'
+
+    - name: amsterdam
+      context:
+        image: 'amsterdam'
+
+    - name: london
+      context:
+        image: 'london'
+
+    - name: all-available
+      context:
+        images:
+            - default
+            - venice
+            - berlin
+            - barcelona
+            - paris
+            - amsterdam
+            - london

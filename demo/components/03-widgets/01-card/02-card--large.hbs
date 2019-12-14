@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/css/card.css">
+<style>
+    #app { display: flex; height: 100%; justify-content: center; }
+    #app > div { width: 90%; margin: 0.5rem 0.5rem 0.5rem 0; }
+    @media (min-width: 768px) { #app > div { width: 60%; margin-left: 0.5rem; } }
+</style>
+
+<div id="app">
+    <div>
+        <card class="card--large"></card>
+    </div>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script src="/js/card.js"></script>
+
+<script defer>
+    new Vue({
+        components: {
+            Card: Card
+        }
+    }).$mount('#app')
+</script>

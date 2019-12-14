@@ -1,1 +1,8 @@
 title: card-overlay
+variants:
+    - name: default
+      context:
+        modifier: ''
+    - name: color-light
+      context:
+        modifier: 'card__overlay--color-light'

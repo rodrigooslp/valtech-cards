@@ -1,9 +1,40 @@
 title: card
-context:
-    contents:
-        - venice
-        - berlin
-        - barcelona
-        - paris
-        - amsterdam
-        - london
+variants:
+    - name: default
+      context:
+        content: 'default'
+
+    - name: venice
+      context:
+        content: 'venice'
+
+    - name: berlin
+      context:
+        content: 'berlin'
+
+    - name: barcelona
+      context:
+        content: 'barcelona'
+
+    - name: paris
+      context:
+        content: 'paris'
+
+    - name: amsterdam
+      context:
+        content: 'amsterdam'
+
+    - name: london
+      context:
+        content: 'london'
+
+    - name: all-available
+      context:
+        contents:
+            - default
+            - venice
+            - berlin
+            - barcelona
+            - paris
+            - amsterdam
+            - london

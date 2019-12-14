@@ -1,13 +1,16 @@
 <link rel="stylesheet" href="/css/card-overlay.css">
 <style>
-    #app { display: flex; height: 90%; justify-content: center; }
+    #app { display: flex; height: 90%; flex-wrap: wrap; justify-content: center; }
     #app > div { position: relative; width: 90%; margin: 0.5rem 0.5rem 0.5rem 0; }
     @media (min-width: 768px) { #app > div { height: 80%; width: 30%; margin-left: 0.5rem; } }
 </style>
 
 <div id="app">
     <div>
-        <card-overlay class="{{modifier}}"></card-overlay>
+        <card-overlay></card-overlay>
+    </div>
+    <div>
+        <card-overlay class="card__overlay--color-light"></card-overlay>
     </div>
 </div>
 
