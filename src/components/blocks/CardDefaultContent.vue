@@ -36,6 +36,7 @@ export default {
 .card__default-content {
   height: 100%;
   border-radius: 0.5rem;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;

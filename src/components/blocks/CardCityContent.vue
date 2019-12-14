@@ -88,6 +88,7 @@ export default {
   height: 100%;
   width: 100%;
   border-radius: 0.5rem;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
