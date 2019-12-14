@@ -1,4 +1,4 @@
-import CardTitle from '../../../../src/components/elements/CardTitle.vue'
+import CardTitle from '@/components/elements/CardTitle.vue'
 const mountVue = require('cypress-vue-unit-test')
 
 describe('CardTitle', () => {

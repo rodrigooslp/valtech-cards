@@ -1,4 +1,4 @@
-import CardBackground from '../../../../src/components/elements/CardBackground.vue'
+import CardBackground from '@/components/elements/CardBackground.vue'
 const mountVue = require('cypress-vue-unit-test')
 
 describe('CardBackground', () => {

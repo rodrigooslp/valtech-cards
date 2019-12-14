@@ -1,8 +1,12 @@
+const path = require('path')
 const webpack = require('@cypress/webpack-preprocessor')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 const webpackOptions = {
   resolve: {
+    alias: {
+      '@': path.resolve(__dirname, '../../../src/')
+    },
     extensions: ['.js', '.vue']
   },
   plugins: [
