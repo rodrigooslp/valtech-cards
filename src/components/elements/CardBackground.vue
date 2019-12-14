@@ -38,7 +38,6 @@ export default {
 .card__background {
   width: 100%;
   height: 100%;
-  border-radius: 0.5rem;
   z-index: -2;
   object-fit: cover;
   position: absolute;
