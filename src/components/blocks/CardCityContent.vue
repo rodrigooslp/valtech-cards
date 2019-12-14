@@ -58,10 +58,11 @@ export default {
     const timeline = gsap.timeline({ paused: true })
 
     timeline
-      .add().to(card.$el, { backgroundImage: 'linear-gradient(#525252bf, #525252bf)', duration: 0.3 })
-      .add().to(header.$el, { y: '-0.5rem', duration: 0.3, ease: 'power3.out' }, '-=0.3')
-      .add().to(description.$el, { maxHeight: '100%', opacity: 1, duration: 0.8, ease: 'sin.out' }, '-=0.2')
-      .add().to(button.$el, { opacity: 1, visibility: 'visible', duration: 0.5, ease: 'sin.out' }, '-=0.7')
+      .add().to(card.$el, { backgroundImage: 'linear-gradient(rgba(86, 86, 86, 0.6), rgba(86, 86, 86, 0.6))', duration: 0.3 })
+      .add().to(this.$el, { boxShadow: '0 0 8px 4px rgba(0, 0, 0, 0.25)', duration: 0.3 }, '-=0.1')
+      .add().to(header.$el, { y: '-0.5rem', duration: 0.3, ease: 'power3.out' }, '-=0.5')
+      .add().to(description.$el, { maxHeight: '100%', opacity: 1, duration: 0.8, ease: 'sin.out' }, '-=0.4')
+      .add().to(button.$el, { opacity: 1, visibility: 'visible', duration: 0.5, ease: 'sin.out' }, '-=0.9')
 
     timeline.progress(1).progress(0)
 
@@ -94,5 +95,6 @@ export default {
   justify-content: center;
   align-items: center;
   position: relative;
+  box-shadow: none;
 }
 </style>

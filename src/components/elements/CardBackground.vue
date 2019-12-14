@@ -39,6 +39,7 @@ export default {
   width: 100%;
   height: 100%;
   z-index: -2;
+  border-radius: 0.5rem;
   object-fit: cover;
   position: absolute;
 }

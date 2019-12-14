@@ -3,7 +3,7 @@
 </template>
 
 <style lang="scss">
-$overlay-color: rgba(60, 60, 60, 0.3);
+$overlay-color: rgba(60, 60, 60, 0.4);
 $overlay-color-light: rgba(113, 113, 113, 0.3);
 
 .card__overlay {

@@ -96,8 +96,6 @@ export default {
   width: 100%;
   height: 20rem;
   max-height: 20rem;
-  border-radius: 0.5rem;
-  overflow: hidden;
   position: relative;
 }
 
