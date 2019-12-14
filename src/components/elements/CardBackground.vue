@@ -12,16 +12,22 @@ export default {
     image: String
   },
   computed: {
+    backgroundName () {
+      if (!this.valid.includes(this.image)) return 'default'
+      return this.image
+    },
+
     imageSourceWebp () {
-      let file = 'default'
-      if (this.image) file = this.image
-      return `/img/bg-${file}.webp`
+      return `/img/bg-${this.backgroundName}.webp`
     },
 
     imageSourceJpg () {
-      let file = 'default'
-      if (this.image) file = this.image
-      return `/img/bg-${file}.jpg`
+      return `/img/bg-${this.backgroundName}.jpg`
+    }
+  },
+  data () {
+    return {
+      valid: ['default', 'venice', 'berlin', 'barcelona', 'paris', 'amsterdam', 'london']
     }
   }
 }
