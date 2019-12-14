@@ -1,5 +1,3 @@
 {
-  "pluginsFile": "tests/e2e/plugins/index.js",
-  "viewportWidth": 1920,
-  "viewportHeight": 1080
+  "pluginsFile": "tests/e2e/plugins/index.js"
 }
