@@ -34,20 +34,12 @@ export default {
 
 <style lang="scss">
 .card__default-content {
-  height: 20rem;
-  max-height: 20rem;
+  height: 100%;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-}
-
-@media (min-width: 850px) {
-  .card__default-content {
-    height: 32rem;
-    max-height: 32rem;
-  }
 }
 </style>

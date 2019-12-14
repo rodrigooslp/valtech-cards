@@ -85,20 +85,13 @@ export default {
 
 <style lang="scss">
 .card__city-content {
-  height: 20rem;
-  max-height: 20rem;
+  height: 100%;
+  width: 100%;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-}
-
-@media (min-width: 850px) {
-  .card__city-content {
-    height: 24rem;
-    max-height: 24rem;
-  }
 }
 </style>
