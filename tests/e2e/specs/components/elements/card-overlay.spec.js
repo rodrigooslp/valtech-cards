@@ -4,7 +4,7 @@ const mountVue = require('cypress-vue-unit-test')
 describe('CardOverlay', () => {
   const template = `
     <div id="app">
-      <card-overlay :class="modifier">{{ text }}</card-overlay>
+      <card-overlay />
     </div>
   `
   const components = { CardOverlay }
