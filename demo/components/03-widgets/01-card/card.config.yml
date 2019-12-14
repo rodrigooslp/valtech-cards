@@ -1,34 +1,45 @@
 title: card
 variants:
     - name: default
+      title: 'card'
       context:
         content: 'default'
 
+    - name: large
+      title: 'card modifier: large'
+
     - name: venice
+      title: 'card content: venice'
       context:
         content: 'venice'
 
     - name: berlin
+      title: 'card content: berlin'
       context:
         content: 'berlin'
 
     - name: barcelona
+      title: 'card content: barcelona'
       context:
         content: 'barcelona'
 
     - name: paris
+      title: 'card content: paris'
       context:
         content: 'paris'
 
     - name: amsterdam
+      title: 'card content: amsterdam'
       context:
         content: 'amsterdam'
 
     - name: london
+      title: 'card content: london'
       context:
         content: 'london'
 
     - name: all-available
+      title: 'card showcase'
       context:
         contents:
             - default

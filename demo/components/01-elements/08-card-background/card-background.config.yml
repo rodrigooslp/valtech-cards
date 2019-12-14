@@ -1,34 +1,42 @@
 title: card-background
 variants:
     - name: default
+      title: 'card-background'
       context:
         image: 'default'
 
     - name: venice
+      title: 'card-background image: venice'
       context:
         image: 'venice'
 
     - name: berlin
+      title: 'card-background image: berlin'
       context:
         image: 'berlin'
 
     - name: barcelona
+      title: 'card-background image: barcelona'
       context:
         image: 'barcelona'
 
     - name: paris
+      title: 'card-background image: paris'
       context:
         image: 'paris'
 
     - name: amsterdam
+      title: 'card-background image: amsterdam'
       context:
         image: 'amsterdam'
 
     - name: london
+      title: 'card-background image: london'
       context:
         image: 'london'
 
     - name: all-available
+      title: 'card-background showcase'
       context:
         images:
             - default
