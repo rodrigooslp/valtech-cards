@@ -27,7 +27,7 @@ class BuildHelper {
   moveFiles () {
     const title = kebabCase(this.name)
 
-    const jsSource = `./dist/${this.name}.umd.js`
+    const jsSource = `./dist/${this.name}.umd.min.js`
     const cssSource = `./dist/${this.name}.css`
 
     let dir = './demo'
