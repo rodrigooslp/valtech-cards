@@ -180,12 +180,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7d17923e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/elements/CardDescription.vue?vue&type=template&id=127a745c&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"689c1d16-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/elements/CardDescription.vue?vue&type=template&id=6e08f414&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('h4',{staticClass:"card__description"},[_vm._t("default")],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/elements/CardDescription.vue?vue&type=template&id=127a745c&
+// CONCATENATED MODULE: ./src/components/elements/CardDescription.vue?vue&type=template&id=6e08f414&
 
 // EXTERNAL MODULE: ./src/components/elements/CardDescription.vue?vue&type=style&index=0&lang=scss&
 var CardDescriptionvue_type_style_index_0_lang_scss_ = __webpack_require__("b2d9");
