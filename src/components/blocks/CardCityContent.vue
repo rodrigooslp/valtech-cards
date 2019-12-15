@@ -64,8 +64,6 @@ export default {
       .add().to(description.$el, { maxHeight: '100%', opacity: 1, duration: 0.8, ease: 'sin.out' }, '-=0.4')
       .add().to(button.$el, { opacity: 1, visibility: 'visible', duration: 0.5, ease: 'sin.out' }, '-=0.9')
 
-    timeline.progress(1).progress(0)
-
     this.timeline = timeline
   },
   methods: {
