@@ -1,5 +1,20 @@
 # valtech-cards
 
+A simple project showcasing a card component created following the concepts of atomic design.
+
+## Explaining the patterns and library choices
+For this project, the chosen CSS preprocessor was [SCSS](https://sass-lang.com/) with [BEM](http://getbem.com/) as the metodology. It goes really well with the atomic component structure.
+
+The grid system used was [Tailwind CSS](https://tailwindcss.com/), an unopinionated and low-level CSS framework. Because of it and [Purgecss](https://www.purgecss.com/), the CSS bundle of this project can be very small (7.6 KiB / 2.1 KiB Gzipped).
+
+The JavaScript framework of choice was [Vue.js](https://vuejs.org/). Thanks to its flexible approach to visual components and [Vue CLI](https://cli.vuejs.org/), this project was much easier to bootstrap and develop.
+
+The animations were all made with [GSAP](https://greensock.com/gsap/), a modern and high performant animation library. With it, its painless to coordenate multiple animations, using timelines. The API is also quite simple and extensible.
+
+The component library used for the demo was [Fractal](https://fractal.build/), its previews can be used as documentation and example of component implementation.
+
+The end-to-end tests were done with [Cypress](https://www.cypress.io/), a very fast and reliable test runner.
+
 ## Project setup
 ```
 yarn install
@@ -15,20 +30,22 @@ yarn run serve
 yarn run build
 ```
 
-### Run your tests
+### Generate the demo assets
 ```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
+yarn run build:demo
 ```
 
-### Run your end-to-end tests
+### Generate a static html of the demo
+```
+yarn run build:fractal
+```
+
+### Serves a local version of the demo
+```
+yarn run serve:fractal
+```
+
+### Run end-to-end tests
 ```
 yarn run test:e2e
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
