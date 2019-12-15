@@ -2,7 +2,7 @@
   <picture class="card__background">
     <source :srcset="imageSourceWebp" type="image/webp">
     <source :srcset="imageSourceJpg" type="image/jpeg">
-    <img class="card__background" :src="imageSourceJpg" :alt="image">
+    <img class="card__background" :src="imageSourceJpg" :alt="image || 'lagoa'">
   </picture>
 </template>
 
