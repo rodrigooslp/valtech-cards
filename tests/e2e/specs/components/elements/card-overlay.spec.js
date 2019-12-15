@@ -14,6 +14,6 @@ describe('CardOverlay', () => {
   it('the overlay should be visible', () => {
     cy
       .get('.card__overlay')
-      .should('be.visible')
+      .should('exist')
   })
 })
