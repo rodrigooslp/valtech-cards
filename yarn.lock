@@ -4624,7 +4624,7 @@ cypress-vue-unit-test@^1.11.3:
     "@kazupon/vue-i18n-loader" "0.3.0"
     common-tags "1.8.0"
 
-cypress@^3.1.0:
+cypress@^3.1.0, cypress@^3.8.0:
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/cypress/-/cypress-3.8.0.tgz#7d4cd08f81f9048ee36760cc9ee3b9014f9e84ab"
   integrity sha512-gtEbqCgKETRc3pQFMsELRgIBNgiQg7vbOWTrCi7WE7bgOwNCaW9PEX8Jb3UN8z/maIp9WwzoFfeySfelYY7nRA==
@@ -13376,7 +13376,7 @@ webpack@4.18.1:
     watchpack "^1.5.0"
     webpack-sources "^1.2.0"
 
-webpack@^4.0.0:
+webpack@^4.0.0, webpack@^4.41.2:
   version "4.41.2"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.41.2.tgz#c34ec76daa3a8468c9b61a50336d8e3303dce74e"
   integrity sha512-Zhw69edTGfbz9/8JJoyRQ/pq8FYUoY0diOXqW0T6yhgdhCv6wr0hra5DwwWexNRns2Z2+gsnrNcbe9hbGBgk/A==
