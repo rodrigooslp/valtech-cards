@@ -11,7 +11,7 @@ describe('CardOverlay', () => {
 
   beforeEach(mountVue({ template, components }))
 
-  it('the overlay should be visible', () => {
+  it('the overlay should be rendered', () => {
     cy
       .get('.card__overlay')
       .should('exist')

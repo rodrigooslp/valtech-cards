@@ -19,6 +19,7 @@ describe('CardDefaultContent', () => {
 
     cy
       .get('.card__title')
+      .should('exist')
       .should('be.visible')
       .invoke('text')
       .should('eq', title)
@@ -35,8 +36,15 @@ describe('CardDefaultContent', () => {
 
     cy
       .get('.card__text')
+      .should('exist')
       .should('be.visible')
       .invoke('text')
       .should('contain', text)
+  })
+
+  it('the overlay should be rendered', () => {
+    cy
+      .get('.card__overlay')
+      .should('exist')
   })
 })

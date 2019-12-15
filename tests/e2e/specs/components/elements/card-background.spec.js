@@ -17,7 +17,7 @@ describe('CardBackground', () => {
 
     cy
       .get('img')
-      .should('be.visible')
+      .should('exist')
       .invoke('attr', 'src')
       .should('include', 'default')
   })
@@ -27,7 +27,7 @@ describe('CardBackground', () => {
 
     cy
       .get('img')
-      .should('be.visible')
+      .should('exist')
       .invoke('attr', 'src')
       .should('include', 'venice')
   })
@@ -37,7 +37,7 @@ describe('CardBackground', () => {
 
     cy
       .get('img')
-      .should('be.visible')
+      .should('exist')
       .invoke('attr', 'src')
       .should('include', 'berlin')
   })
@@ -47,7 +47,7 @@ describe('CardBackground', () => {
 
     cy
       .get('img')
-      .should('be.visible')
+      .should('exist')
       .invoke('attr', 'src')
       .should('include', 'barcelona')
   })
@@ -57,7 +57,7 @@ describe('CardBackground', () => {
 
     cy
       .get('img')
-      .should('be.visible')
+      .should('exist')
       .invoke('attr', 'src')
       .should('include', 'paris')
   })
@@ -67,7 +67,7 @@ describe('CardBackground', () => {
 
     cy
       .get('img')
-      .should('be.visible')
+      .should('exist')
       .invoke('attr', 'src')
       .should('include', 'amsterdam')
   })
@@ -77,7 +77,7 @@ describe('CardBackground', () => {
 
     cy
       .get('img')
-      .should('be.visible')
+      .should('exist')
       .invoke('attr', 'src')
       .should('include', 'london')
   })
@@ -87,7 +87,7 @@ describe('CardBackground', () => {
 
     cy
       .get('img')
-      .should('be.visible')
+      .should('exist')
       .invoke('attr', 'src')
       .should('include', 'default')
   })
@@ -97,7 +97,7 @@ describe('CardBackground', () => {
 
     cy
       .get('img')
-      .should('be.visible')
+      .should('exist')
       .invoke('attr', 'src')
       .should('include', 'default')
   })
@@ -107,7 +107,7 @@ describe('CardBackground', () => {
 
     cy
       .get('img')
-      .should('be.visible')
+      .should('exist')
       .invoke('attr', 'src')
       .should('include', 'default')
   })
@@ -117,7 +117,7 @@ describe('CardBackground', () => {
 
     cy
       .get('img')
-      .should('be.visible')
+      .should('exist')
       .invoke('attr', 'src')
       .should('include', 'default')
   })

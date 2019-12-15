@@ -11,10 +11,10 @@ describe('CardLogo', () => {
 
   beforeEach(mountVue({ template, components }))
 
-  it('the logo should be visible', () => {
+  it('the logo img should exist', () => {
     cy
       .get('img')
-      .should('be.visible')
+      .should('exist')
   })
 
   it('the logo source should link to the correct file', () => {

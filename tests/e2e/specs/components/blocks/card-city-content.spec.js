@@ -19,6 +19,7 @@ describe('CardCityContent', () => {
 
     cy
       .get('.card__title')
+      .should('exist')
       .invoke('text')
       .should('eq', title)
   })
@@ -30,6 +31,7 @@ describe('CardCityContent', () => {
 
     cy
       .get('.card__subtitle')
+      .should('exist')
       .invoke('text')
       .should('eq', subtitle)
   })
@@ -45,7 +47,20 @@ describe('CardCityContent', () => {
 
     cy
       .get('.card__description')
+      .should('exist')
       .invoke('text')
       .should('contain', text)
+  })
+
+  it('the overlay should be rendered', () => {
+    cy
+      .get('.card__overlay')
+      .should('exist')
+  })
+
+  it('the button should be rendered', () => {
+    cy
+      .get('.card__button')
+      .should('exist')
   })
 })

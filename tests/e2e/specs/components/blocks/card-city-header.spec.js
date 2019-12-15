@@ -19,6 +19,7 @@ describe('CardCityHeader', () => {
 
     cy
       .get('.card__title')
+      .should('exist')
       .should('be.visible')
       .invoke('text')
       .should('eq', title)
@@ -31,6 +32,7 @@ describe('CardCityHeader', () => {
 
     cy
       .get('.card__subtitle')
+      .should('exist')
       .should('be.visible')
       .invoke('text')
       .should('eq', subtitle)
