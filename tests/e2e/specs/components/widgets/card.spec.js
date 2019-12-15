@@ -81,7 +81,7 @@ describe('Card', () => {
 
   it('content: null should have the expected logo', () => {
     cy
-      .get('.card__card-logo')
+      .get('.card__logo')
       .should('exist')
   })
 
@@ -137,7 +137,7 @@ describe('Card', () => {
     Cypress.vue.content = content
 
     cy
-      .get('.card__card-logo')
+      .get('.card__logo')
       .should('exist')
   })
 
@@ -208,7 +208,7 @@ describe('Card', () => {
     Cypress.vue.content = content
 
     cy
-      .get('.card__card-logo')
+      .get('.card__logo')
       .should('not.exist')
   })
 
@@ -281,7 +281,7 @@ describe('Card', () => {
     Cypress.vue.content = content
 
     cy
-      .get('.card__card-logo')
+      .get('.card__logo')
       .should('not.exist')
   })
 
@@ -354,7 +354,7 @@ describe('Card', () => {
     Cypress.vue.content = content
 
     cy
-      .get('.card__card-logo')
+      .get('.card__logo')
       .should('not.exist')
   })
 
@@ -427,7 +427,7 @@ describe('Card', () => {
     Cypress.vue.content = content
 
     cy
-      .get('.card__card-logo')
+      .get('.card__logo')
       .should('not.exist')
   })
 
@@ -500,7 +500,7 @@ describe('Card', () => {
     Cypress.vue.content = content
 
     cy
-      .get('.card__card-logo')
+      .get('.card__logo')
       .should('not.exist')
   })
 
@@ -573,7 +573,7 @@ describe('Card', () => {
     Cypress.vue.content = content
 
     cy
-      .get('.card__card-logo')
+      .get('.card__logo')
       .should('not.exist')
   })
 
