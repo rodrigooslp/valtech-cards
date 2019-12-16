@@ -2,7 +2,7 @@
 
 A simple project showcasing a card component created following the concepts of atomic design.
 
-## Explaining the patterns and library choices
+## Patterns and library choices
 For this project, the chosen CSS preprocessor was [SCSS](https://sass-lang.com/) with [BEM](http://getbem.com/) as the metodology. It goes really well with the atomic component structure.
 
 The grid system used was [Tailwind CSS](https://tailwindcss.com/), an unopinionated and low-level CSS framework. Because of it and [Purgecss](https://www.purgecss.com/), the CSS bundle of this project can be very small (7.6 KiB / 2.1 KiB Gzipped).
