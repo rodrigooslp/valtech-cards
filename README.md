@@ -15,6 +15,9 @@ The component library used for the demo was [Fractal](https://fractal.build/), i
 
 The end-to-end tests were done with [Cypress](https://www.cypress.io/), a very fast and reliable test runner.
 
+## Demo
+The project is deployed in the Netlify platform. [Here](https://valtech-cards.netlify.app/) it is. The docs page is also available [here](https://valtech-cards-docs.netlify.app/).
+
 ## Project setup
 ```
 yarn install
